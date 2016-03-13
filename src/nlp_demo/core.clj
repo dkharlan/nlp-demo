@@ -27,7 +27,7 @@
                  :dcoref   CorefCoreAnnotations$CorefChainAnnotation})
 
 (def default-annotator-props
-  (props/map->properties {:annotators (apply str (interpose ", " (map name (keys annotators))))
+  (props/map->properties {:annotators                    (apply str (interpose ", " (map name (keys annotators))))
                           :customAnnotatorClass.stopword "intoxicant.analytics.coreNlp.StopwordAnnotator"}))
 
 (defn read-pdf-text [file]
@@ -56,14 +56,49 @@
 (defn sentence->tokens [sentence]
   (.get sentence CoreAnnotations$TokensAnnotation))
 
+(defn sentence->dependency-graph [sentence]
+  (.get sentence SemanticGraphCoreAnnotations$CollapsedCCProcessedDependenciesAnnotation))
+
+(defn label->text [label]
+  (.get label CoreAnnotations$TextAnnotation))
+
+(defn token->pos [token]
+  (.get token CoreAnnotations$PartOfSpeechAnnotation))
+
+(defn token->entity [token]
+  (.get token CoreAnnotations$NamedEntityTagAnnotation))
+
+(defn token->normalized-entity [token]
+  (.get token CoreAnnotations$NormalizedNamedEntityTagAnnotation))
+
 (defn is-stopword? [token]
   (.first ^Pair (.get token StopwordAnnotator)))
 
+(defn is-punctuation? [token]
+  (let [punctuation ["," "." ":" "?" "!" "'" "-LRB-" "-RRB-"]]
+    (some #(= (token->pos token) %) punctuation)))
+
+(defn remove-stopwords-and-punctuation [tokens]
+  (->> tokens
+       (remove is-stopword?)
+       (remove is-punctuation?)))
+
+; inspired by http://blog.find-method.de/index.php?/archives/208-Coding-katas-Clojure-Trigrams.html
+; EPL licensed
+(defn tokens->ngrams
+  ([tokens n]
+   (lazy-seq
+     (tokens->ngrams tokens n [])))
+  ([tokens n accum]
+   (if-let [tokens (seq tokens)]
+     (recur (rest tokens) n (conj accum (take n tokens)))
+     accum)))
+
 (defn print-token-info [token]
-  (let [text (.get token CoreAnnotations$TextAnnotation)
-        part-of-speech (.get token CoreAnnotations$PartOfSpeechAnnotation)
-        named-entity (.get token CoreAnnotations$NamedEntityTagAnnotation)
-        normalized-named-entity (.get token CoreAnnotations$NormalizedNamedEntityTagAnnotation)]
+  (let [text (label->text token)
+        part-of-speech (token->pos token)
+        named-entity (token->entity token)
+        normalized-named-entity (token->normalized-entity token)]
     (printf "%-16s%-8s%-12s%-15s%-5s\n"
             text
             part-of-speech
@@ -73,16 +108,28 @@
             named-entity
             (or normalized-named-entity ""))))
 
+(defn print-ngram [ngram]
+  (let [ngram-desc (apply str (interpose " " (map label->text ngram)))
+        pos-desc (apply str (interpose " " (map token->pos ngram)))]
+    (printf "%-45s%-15s\n" ngram-desc pos-desc)))
+
 (defn print-sentence-info [sentence]
-  (let [text (.get sentence CoreAnnotations$TextAnnotation)
+  (let [text (label->text sentence)
         tokens (sentence->tokens sentence)
-        dependency-graph (.get sentence SemanticGraphCoreAnnotations$CollapsedCCProcessedDependenciesAnnotation)]
-    (printf "Sentence: %s\n" text)
+        n 3
+        ngrams (tokens->ngrams (remove-stopwords-and-punctuation tokens) n)
+        dependency-graph (sentence->dependency-graph sentence)]
+    (println "+===============================================================+")
+    (printf "Sentence: %s\n\n" text)
     (printf "%-16s%-8s%-12s%-15s%-5s" "Word" "POS" "Stopword?" "Ent." "N.Ent.\n")
     (println "-----------------------------------------------------------------")
     (doseq [token tokens]
       (print-token-info token))
-    (printf "Dependency graph:\n%s\n" (str dependency-graph))))
+    (printf "\nDependency graph:\n%s\n" (str dependency-graph))
+    (printf "%d-grams\n--------\n" n)
+    (doseq [ngram ngrams]
+      (print-ngram ngram))
+    (println "+===============================================================+\n")))
 
 (defn print-document-info [document]
   (let [sentences (document->sentences document)]

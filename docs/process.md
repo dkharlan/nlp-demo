@@ -10,4 +10,4 @@
 
 ### N-Grams
 * Found [jconwell/CoreNlp](https://github.com/jconwell/coreNlp) for removing stopwords
-* 
+* Separated words into trigrams
