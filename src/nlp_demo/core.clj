@@ -50,17 +50,32 @@
     (.annotate pipeline annotation)
     annotation))
 
+(defn document->sentences [document]
+  (.get document CoreAnnotations$SentencesAnnotation))
+
+(defn sentence->tokens [sentence]
+  (.get sentence CoreAnnotations$TokensAnnotation))
+
+(defn is-stopword? [token]
+  (.first ^Pair (.get token StopwordAnnotator)))
+
 (defn print-token-info [token]
   (let [text (.get token CoreAnnotations$TextAnnotation)
         part-of-speech (.get token CoreAnnotations$PartOfSpeechAnnotation)
         named-entity (.get token CoreAnnotations$NamedEntityTagAnnotation)
-        normalized-named-entity (.get token CoreAnnotations$NormalizedNamedEntityTagAnnotation)
-        stop-word? (.first ^Pair (.get token StopwordAnnotator))]
-    (printf "%-16s%-8s%-12s%-15s%-5s\n" text part-of-speech (if stop-word? "Y" "N") named-entity (or normalized-named-entity ""))))
+        normalized-named-entity (.get token CoreAnnotations$NormalizedNamedEntityTagAnnotation)]
+    (printf "%-16s%-8s%-12s%-15s%-5s\n"
+            text
+            part-of-speech
+            (if (is-stopword? token)
+              "Y"
+              "N")
+            named-entity
+            (or normalized-named-entity ""))))
 
 (defn print-sentence-info [sentence]
   (let [text (.get sentence CoreAnnotations$TextAnnotation)
-        tokens (.get sentence CoreAnnotations$TokensAnnotation)
+        tokens (sentence->tokens sentence)
         dependency-graph (.get sentence SemanticGraphCoreAnnotations$CollapsedCCProcessedDependenciesAnnotation)]
     (printf "Sentence: %s\n" text)
     (printf "%-16s%-8s%-12s%-15s%-5s" "Word" "POS" "Stopword?" "Ent." "N.Ent.\n")
@@ -70,7 +85,7 @@
     (printf "Dependency graph:\n%s\n" (str dependency-graph))))
 
 (defn print-document-info [document]
-  (let [sentences (.get document CoreAnnotations$SentencesAnnotation)]
+  (let [sentences (document->sentences document)]
     (doseq [sentence sentences]
       (print-sentence-info sentence))))
 
