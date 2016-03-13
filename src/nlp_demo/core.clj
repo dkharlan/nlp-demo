@@ -11,6 +11,7 @@
            (edu.stanford.nlp.semgraph SemanticGraphCoreAnnotations$BasicDependenciesAnnotation SemanticGraphCoreAnnotations$CollapsedDependenciesAnnotation SemanticGraphCoreAnnotations$CollapsedCCProcessedDependenciesAnnotation)
            (edu.stanford.nlp.dcoref CorefCoreAnnotations$CorefChainAnnotation)))
 
+; tokenize, pos and parse added as dependencies for ssplit, lemma and dcoref respectively
 (def annotators {:tokenize CoreAnnotations$TokensAnnotation
                  :ssplit   CoreAnnotations$SentencesAnnotation
                  :pos      CoreAnnotations$PartOfSpeechAnnotation
@@ -22,7 +23,6 @@
                             SemanticGraphCoreAnnotations$CollapsedCCProcessedDependenciesAnnotation]
                  :dcoref   CorefCoreAnnotations$CorefChainAnnotation})
 
-; tokenize, pos and parse added as dependencies for ssplit, lemma and dcoref respectively
 (def default-annotator-props
   (props/map->properties {:annotators (apply str (interpose ", " (map name (keys annotators))))}))
 
@@ -64,12 +64,15 @@
       (print-token-info token))
     (printf "Dependency graph:\n%s\n" (str dependency-graph))))
 
-(defn print-document-info [sentences]
-  (doseq [sentence sentences]
-    (print-sentence-info sentence)))
+(defn print-document-info [document]
+  (let [sentences (.get document CoreAnnotations$SentencesAnnotation)]
+    (doseq [sentence sentences]
+      (print-sentence-info sentence))))
 
 (defn -main
   [& args]
-  (let [sample-text (read-pdf-text (io/resource "essays/D2.130.10.pdf"))
-        document (analyze-document default-annotator-props sample-text)]
-    (.get document CoreAnnotations$TokensAnnotation)))
+  (->> "essays/D2.130.10.pdf"
+       (io/resource)
+       (read-pdf-text)
+       (analyze-document default-annotator-props)
+       (print-document-info)))
