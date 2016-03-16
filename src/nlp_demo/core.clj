@@ -26,7 +26,7 @@
                  :dcoref   CorefCoreAnnotations$CorefChainAnnotation})
 
 (def default-annotator-props
-  (props/map->properties {:annotators                    (apply str (interpose ", " (map name (keys annotators))))}))
+  (props/map->properties {:annotators (apply str (interpose ", " (map name (keys annotators))))}))
 
 (defn read-pdf-text [file]
   (let [parser (PDFParser. (io/input-stream file))]
@@ -44,22 +44,11 @@
       (file-seq)
       (rest)))
 
-(defn read-all-pdfs [resource-dir]
-  (->> resource-dir
-       (get-all-paths)
-       (map read-pdf-text)))
-
 (defn analyze-document [annotator-props text]
   (let [pipeline (StanfordCoreNLP. ^Properties annotator-props)
         annotation (Annotation. ^String text)]
     (.annotate pipeline annotation)
     annotation))
-
-(defn analyze-pdf [pdf-path]
-  (->> pdf-path
-       (io/resource)
-       (read-pdf-text)
-       (analyze-document default-annotator-props)))
 
 (defn document->sentences [document]
   (.get document CoreAnnotations$SentencesAnnotation))
