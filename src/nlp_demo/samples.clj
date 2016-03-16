@@ -1,6 +1,9 @@
 (ns nlp-demo.samples
-  (:require [nlp-demo.core :refer :all]
-            [clojure.java.io :as io]))
+  (:require [clojure.java.io :as io]
+            [nlp-demo.pdf :refer :all]
+            [nlp-demo.nlp :refer :all]
+            [nlp-demo.analysis :refer :all]
+            [nlp-demo.reports :refer :all]))
 
 (defn all-named-entities []
   (->> "essays"
