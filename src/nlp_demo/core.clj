@@ -10,16 +10,14 @@
            (edu.stanford.nlp.ling CoreAnnotations$TokensAnnotation CoreAnnotations$SentencesAnnotation CoreAnnotations$PartOfSpeechAnnotation CoreAnnotations$LemmaAnnotation CoreAnnotations$NamedEntityTagAnnotation CoreAnnotations$NormalizedNamedEntityTagAnnotation CoreAnnotations$TextAnnotation)
            (edu.stanford.nlp.semgraph SemanticGraphCoreAnnotations$BasicDependenciesAnnotation SemanticGraphCoreAnnotations$CollapsedDependenciesAnnotation SemanticGraphCoreAnnotations$CollapsedCCProcessedDependenciesAnnotation)
            (edu.stanford.nlp.dcoref CorefCoreAnnotations$CorefChainAnnotation)
-           (intoxicant.analytics.coreNlp StopwordAnnotator)
-           (edu.stanford.nlp.util Pair)
            (java.io IOException)))
 
+; this structure is just for convenience
 ; tokenize, pos added as dependencies for ssplit, lemma respectively
 (def annotators {:tokenize CoreAnnotations$TokensAnnotation
                  :ssplit   CoreAnnotations$SentencesAnnotation
                  :pos      CoreAnnotations$PartOfSpeechAnnotation
                  :lemma    CoreAnnotations$LemmaAnnotation
-                 :stopword StopwordAnnotator
                  :ner      [CoreAnnotations$NamedEntityTagAnnotation
                             CoreAnnotations$NormalizedNamedEntityTagAnnotation]
                  :parse    [SemanticGraphCoreAnnotations$BasicDependenciesAnnotation
@@ -28,8 +26,7 @@
                  :dcoref   CorefCoreAnnotations$CorefChainAnnotation})
 
 (def default-annotator-props
-  (props/map->properties {:annotators                    (apply str (interpose ", " (map name (keys annotators))))
-                          :customAnnotatorClass.stopword "intoxicant.analytics.coreNlp.StopwordAnnotator"}))
+  (props/map->properties {:annotators                    (apply str (interpose ", " (map name (keys annotators))))}))
 
 (defn read-pdf-text [file]
   (let [parser (PDFParser. (io/input-stream file))]
@@ -85,16 +82,12 @@
 (defn token->normalized-entity [token]
   (.get token CoreAnnotations$NormalizedNamedEntityTagAnnotation))
 
-(defn is-stopword? [token]
-  (.first ^Pair (.get token StopwordAnnotator)))
-
 (defn is-punctuation? [token]
   (let [punctuation ["," "." ":" "?" "!" "'" "-LRB-" "-RRB-"]]
     (some #(= (token->pos token) %) punctuation)))
 
-(defn remove-stopwords-and-punctuation [tokens]
+(defn remove-punctuation [tokens]
   (->> tokens
-       (remove is-stopword?)
        (remove is-punctuation?)))
 
 ; inspired by http://blog.find-method.de/index.php?/archives/208-Coding-katas-Clojure-Trigrams.html
@@ -113,12 +106,9 @@
         part-of-speech (token->pos token)
         named-entity (token->entity token)
         normalized-named-entity (token->normalized-entity token)]
-    (printf "%-16s%-8s%-12s%-15s%-5s\n"
+    (printf "%-16s%-8s%-15s%-5s\n"
             text
             part-of-speech
-            (if (is-stopword? token)
-              "Y"
-              "N")
             named-entity
             (or normalized-named-entity ""))))
 
@@ -131,11 +121,11 @@
   (let [text (label->text sentence)
         tokens (sentence->tokens sentence)
         n 3
-        ngrams (tokens->ngrams (remove-stopwords-and-punctuation tokens) n)
+        ngrams (tokens->ngrams (remove-punctuation tokens) n)
         dependency-graph (sentence->dependency-graph sentence)]
     (println "+===============================================================+")
     (printf "Sentence: %s\n\n" text)
-    (printf "%-16s%-8s%-12s%-15s%-5s" "Word" "POS" "Stopword?" "Ent." "N.Ent.\n")
+    (printf "%-16s%-8s%-15s%-5s\n" "Word" "POS" "Ent." "N.Ent.")
     (println "-----------------------------------------------------------------")
     (doseq [token tokens]
       (print-token-info token))
