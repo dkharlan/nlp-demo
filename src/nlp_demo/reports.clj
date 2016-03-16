@@ -21,7 +21,7 @@
 (defn print-sentence-info [sentence]
   (let [text (nlp/label->text sentence)
         tokens (nlp/sentence->tokens sentence)
-        n 3
+        n 2
         ngrams (analysis/tokens->ngrams (analysis/remove-punctuation tokens) n)
         dependency-graph (nlp/sentence->dependency-graph sentence)]
     (println "+===============================================================+")

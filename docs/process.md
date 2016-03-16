@@ -2,7 +2,6 @@
 * Decided to use Clojure for rapid prototyping
 * Used PDFBox to extract text
 * Decided to focus on shallow techniques -- deep learning requires more expertise and time for training
-* Used Stanford CoreNLP for P.O.S. tagging and NER
 
 ## Experimentation
 ### Dependency Parsing
@@ -11,7 +10,7 @@
 ### Sentiment Analysis
 * Can recognize positive / negative connotations
 * CoreNLP uses deep learning to improve on typical approach
-* Related idea, but probably needs domain-specific tuning
+* Potentially useful, but probably needs domain-specific tuning
 
 ### Named Entity Recognition
 * Built in NER can recognize people, locations, organizations
@@ -27,8 +26,15 @@
     
 ### N-Grams
 * Approaches besides CoreNLP?
-* Found [jconwell/CoreNlp](https://github.com/jconwell/coreNlp) for removing stopwords
-* Separated words into trigrams
-* Start symbol or no start symbol?
-* Bigram prob P(Wi | Wi-1) = count(Wi-1,Wi) / count(Wi-1)
-* Store probs at log p rather than p -- avoids underflow, faster 
+* Found Stanford's NLP course on Coursera
+* How likely is "He went to the store" likely to appear?
+* Markov assumption: assume that P(store | the | to | went | He) = P(store | He)
+* P(W<sub>i</sub> | W<sub>i-1</sub>) = count(W<sub>i-1</sub>,W<sub>i</sub>) / count(W<sub>i-1</sub>)
+    * E.g. if P(have | would) = 0.5, then "would have" accounts for 50% of the occurrences of "would"
+* Separated words into bigrams
+* Bigram probabilities reflect different characteristics of corpus
+    * Some relevant -- e.g. domain knowledge
+    * Some irrelevant -- grammar "artifacts"
+* Found other suggested approaches
+    * Tokenize, remove stopwords, construct trigrams, drop everything but noun-verb combinations
+    
