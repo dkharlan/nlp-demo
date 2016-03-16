@@ -11,7 +11,8 @@
            (edu.stanford.nlp.semgraph SemanticGraphCoreAnnotations$BasicDependenciesAnnotation SemanticGraphCoreAnnotations$CollapsedDependenciesAnnotation SemanticGraphCoreAnnotations$CollapsedCCProcessedDependenciesAnnotation)
            (edu.stanford.nlp.dcoref CorefCoreAnnotations$CorefChainAnnotation)
            (intoxicant.analytics.coreNlp StopwordAnnotator)
-           (edu.stanford.nlp.util Pair)))
+           (edu.stanford.nlp.util Pair)
+           (java.io IOException)))
 
 ; tokenize, pos added as dependencies for ssplit, lemma respectively
 (def annotators {:tokenize CoreAnnotations$TokensAnnotation
@@ -35,20 +36,33 @@
     (.parse parser)
     (with-open [cos-doc (.getDocument parser)
                 pd-doc (PDDocument. cos-doc)]
-      (.getText (PDFTextStripper.) pd-doc))))
+      (try
+        (.getText (PDFTextStripper.) pd-doc)
+        (catch IOException _ "")))))
+
+(defn get-all-paths [resource-dir]
+  (-> resource-dir
+      (io/resource)
+      (io/file)
+      (file-seq)
+      (rest)))
 
 (defn read-all-pdfs [resource-dir]
-  (map read-pdf-text (-> resource-dir
-                         (io/resource)
-                         (io/file)
-                         (file-seq)
-                         (rest))))
+  (->> resource-dir
+       (get-all-paths)
+       (map read-pdf-text)))
 
 (defn analyze-document [annotator-props text]
   (let [pipeline (StanfordCoreNLP. ^Properties annotator-props)
         annotation (Annotation. ^String text)]
     (.annotate pipeline annotation)
     annotation))
+
+(defn analyze-pdf [pdf-path]
+  (->> pdf-path
+       (io/resource)
+       (read-pdf-text)
+       (analyze-document default-annotator-props)))
 
 (defn document->sentences [document]
   (.get document CoreAnnotations$SentencesAnnotation))
@@ -136,10 +150,36 @@
     (doseq [sentence sentences]
       (print-sentence-info sentence))))
 
-(defn -main
-  [& args]
-  (->> "essays/D2.130.10.pdf"
-       (io/resource)
-       (read-pdf-text)
-       (analyze-document default-annotator-props)
-       (print-document-info)))
+(defn is-non-normalized-named-entity? [token]
+  (let [entity (token->entity token)
+        normalized-entity (token->normalized-entity token)]
+    (and entity
+         (not normalized-entity)
+         (not (= entity "O")))))
+
+(defn find-named-entity-labels [document]
+  (->> document
+       (document->sentences)
+       (map sentence->tokens)
+       (map #(filter is-non-normalized-named-entity? %))
+       (reduce concat [])))
+
+(defn find-named-entity-counts [named-entity-labels]
+  (let [named-entity-texts (->> named-entity-labels
+                                (map label->text)
+                                (map clojure.string/lower-case))
+        texts-with-counts (for [txt named-entity-texts]
+                            [txt (count (filter #(= txt %) named-entity-texts))])]
+    (into {} texts-with-counts)))
+
+(defn count-entities [documents]
+  (->> documents
+       (map find-named-entity-labels)
+       (map find-named-entity-counts)))
+
+(defn combine-and-sort-counts [counts]
+  (let [combined-counts (apply merge-with + counts)]
+    (into (sorted-map-by (fn [key1 key2]
+                           (compare [(get combined-counts key2) key2]
+                                    [(get combined-counts key1) key1])))
+          combined-counts)))
