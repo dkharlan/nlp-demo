@@ -5,7 +5,7 @@
 * Used PDFBox to extract text
 * Wrote simple wrapper around library
 
-## Experimentation
+## Playing With Stanford CoreNLP
 ### Dependency Parsing
 * Powerful feature, but challenging to pull meaning in isolation
 
@@ -26,7 +26,16 @@
     * Could combine with dependency analysis to pull out phrases instead of tokens
     * Included NER model is very generic
     * Better results if trained with domain-specific corpus
-    
+
+### Others
+* EntityMentionsAnnotator
+    * Can pull out multi-token named entities
+* Corefeference Resolution
+    * Can recognize phrases that refer to the same clause / entity
+* Natural Logic
+    * Deep learning models to infer hypotheses from a given premise
+    * Might help to "ask questions" concerning input text
+ 
 ### N-Grams
 * Approaches besides CoreNLP?
 * Found Stanford's NLP course on Coursera
@@ -41,3 +50,8 @@
 * Found other suggested approaches
     * Tokenize, remove stopwords, construct trigrams, drop everything but noun-verb combinations
     
+### Final Thoughts
+* Heavily influenced by noise in input data
+* Many low-level decisions need to be made
+* Training new models will improve inferences
+* Combination of methods seems necessary
