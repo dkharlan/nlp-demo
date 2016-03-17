@@ -1,7 +1,9 @@
 ## First Steps
-* Decided to use Clojure for rapid prototyping
+* Decided to use Clojure
+    * Excels at rapid prototyping and interactive development
+    * Easy to use Java libraries
 * Used PDFBox to extract text
-* Decided to focus on shallow techniques -- deep learning requires more expertise and time for training
+* Wrote simple wrapper around library
 
 ## Experimentation
 ### Dependency Parsing
@@ -20,7 +22,7 @@
 * Pull out named entities and convert to lowercase, remove normalized entities
 * Combine and sort counts for all named entities
 * Problems with my method:
-    * Token-based with no knowledge of grammar; could combine with Dependency Parsing
+    * Token-based with no knowledge of grammar; could combine with Dependency Parsing or EntityMentionsAnnotator
     * Could combine with dependency analysis to pull out phrases instead of tokens
     * Included NER model is very generic
     * Better results if trained with domain-specific corpus
