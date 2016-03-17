@@ -1,0 +1,2746 @@
++===============================================================+
+Sentence: Chem 130 SSGTuesday December 10, 2013Lewis StructuresGilbert N. Lewis’ theory of bonding was and still is essential in understanding how elements bond and provides a visual  representation for the bonds between elements.
+
+Word            POS     Ent.           N.Ent.
+-----------------------------------------------------------------
+Chem            NNP     O                   
+130             CD      NUMBER         130.0
+SSGTuesday      NNP     O                   
+December        NNP     DATE           XXXX-12-10
+10              CD      DATE           XXXX-12-10
+,               ,       O                   
+2013Lewis       NN      O                   
+StructuresGilbertNNP     PERSON              
+N.              NNP     PERSON              
+Lewis           NNP     PERSON              
+'               POS     O                   
+theory          NN      O                   
+of              IN      O                   
+bonding         NN      O                   
+was             VBD     O                   
+and             CC      O                   
+still           RB      O                   
+is              VBZ     O                   
+essential       JJ      O                   
+in              IN      O                   
+understanding   VBG     O                   
+how             WRB     O                   
+elements        NNS     O                   
+bond            NN      O                   
+and             CC      O                   
+provides        VBZ     O                   
+a               DT      O                   
+visual          JJ      O                   
+representation  NN      O                   
+for             IN      O                   
+the             DT      O                   
+bonds           NNS     O                   
+between         IN      O                   
+elements        NNS     O                   
+.               .       O                   
+
+Dependency graph:
+-> was/VBD (root)
+  -> December/NNP (nmod:tmod)
+    -> Chem/NNP (compound)
+    -> 130/CD (nummod)
+    -> SSGTuesday/NNP (compound)
+    -> 10/CD (dep)
+  -> ,/, (punct)
+  -> theory/NN (nsubj)
+    -> Lewis/NNP (nmod:poss)
+      -> 2013Lewis/NN (compound)
+      -> StructuresGilbert/NNP (compound)
+      -> N./NNP (compound)
+      -> '/POS (case)
+    -> bonding/NN (nmod:of)
+      -> of/IN (case)
+  -> and/CC (cc)
+  -> essential/JJ (conj:and)
+    -> theory/NN (nsubj)
+    -> still/RB (advmod)
+    -> is/VBZ (cop)
+    -> understanding/VBG (advcl)
+      -> in/IN (mark)
+      -> how/WRB (advmod)
+      -> bond/NN (dobj)
+        -> elements/NNS (compound)
+    -> and/CC (cc)
+    -> provides/VBZ (conj:and)
+      -> representation/NN (dobj)
+        -> a/DT (det)
+        -> visual/JJ (amod)
+      -> bonds/NNS (nmod:for)
+        -> for/IN (case)
+        -> the/DT (det)
+        -> elements/NNS (nmod:between)
+          -> between/IN (case)
+  -> provides/VBZ (conj:and)
+  -> ./. (punct)
+
+2-grams
+--------
+Chem 130                                     NNP CD         
+130 SSGTuesday                               CD NNP         
+SSGTuesday December                          NNP NNP        
+December 10                                  NNP CD         
+10 2013Lewis                                 CD NN          
+2013Lewis StructuresGilbert                  NN NNP         
+StructuresGilbert N.                         NNP NNP        
+N. Lewis                                     NNP NNP        
+Lewis '                                      NNP POS        
+' theory                                     POS NN         
+theory of                                    NN IN          
+of bonding                                   IN NN          
+bonding was                                  NN VBD         
+was and                                      VBD CC         
+and still                                    CC RB          
+still is                                     RB VBZ         
+is essential                                 VBZ JJ         
+essential in                                 JJ IN          
+in understanding                             IN VBG         
+understanding how                            VBG WRB        
+how elements                                 WRB NNS        
+elements bond                                NNS NN         
+bond and                                     NN CC          
+and provides                                 CC VBZ         
+provides a                                   VBZ DT         
+a visual                                     DT JJ          
+visual representation                        JJ NN          
+representation for                           NN IN          
+for the                                      IN DT          
+the bonds                                    DT NNS         
+bonds between                                NNS IN         
+between elements                             IN NNS         
+elements                                     NNS            
++===============================================================+
+
++===============================================================+
+Sentence: Lewis improved previous theories of  molecular structure and bonding, such as the electrochemical theory of valence originally explained by Richard Abegg in 1904; Abegg was a German chemist and pioneer of valence theory.
+
+Word            POS     Ent.           N.Ent.
+-----------------------------------------------------------------
+Lewis           NNP     PERSON              
+improved        VBD     O                   
+previous        JJ      O                   
+theories        NNS     O                   
+of              IN      O                   
+molecular       JJ      O                   
+structure       NN      O                   
+and             CC      O                   
+bonding         NN      O                   
+,               ,       O                   
+such            JJ      O                   
+as              IN      O                   
+the             DT      O                   
+electrochemical JJ      O                   
+theory          NN      O                   
+of              IN      O                   
+valence         NN      O                   
+originally      RB      O                   
+explained       VBN     O                   
+by              IN      O                   
+Richard         NNP     PERSON              
+Abegg           NNP     PERSON              
+in              IN      O                   
+1904            CD      DATE           1904 
+;               :       O                   
+Abegg           NNP     PERSON              
+was             VBD     O                   
+a               DT      O                   
+German          JJ      MISC                
+chemist         NN      O                   
+and             CC      O                   
+pioneer         NN      O                   
+of              IN      O                   
+valence         NN      O                   
+theory          NN      O                   
+.               .       O                   
+
+Dependency graph:
+-> improved/VBD (root)
+  -> Lewis/NNP (nsubj)
+  -> theories/NNS (dobj)
+    -> previous/JJ (amod)
+    -> structure/NN (nmod:of)
+      -> of/IN (case)
+      -> molecular/JJ (amod)
+      -> and/CC (cc)
+      -> bonding/NN (conj:and)
+    -> bonding/NN (nmod:of)
+    -> ,/, (punct)
+    -> theory/NN (nmod:such_as)
+      -> such/JJ (case)
+        -> as/IN (mwe)
+      -> the/DT (det)
+      -> electrochemical/JJ (amod)
+      -> valence/NN (nmod:of)
+        -> of/IN (case)
+        -> explained/VBN (acl)
+          -> originally/RB (advmod)
+          -> Abegg/NNP (nmod:by)
+            -> by/IN (case)
+            -> Richard/NNP (compound)
+            -> 1904/CD (nmod:in)
+              -> in/IN (case)
+  -> ;/: (punct)
+  -> chemist/NN (parataxis)
+    -> Abegg/NNP (nsubj)
+    -> was/VBD (cop)
+    -> a/DT (det)
+    -> German/JJ (amod)
+    -> and/CC (cc)
+    -> pioneer/NN (conj:and)
+    -> theory/NN (nmod:of)
+      -> of/IN (case)
+      -> valence/NN (compound)
+  -> pioneer/NN (parataxis)
+  -> ./. (punct)
+
+2-grams
+--------
+Lewis improved                               NNP VBD        
+improved previous                            VBD JJ         
+previous theories                            JJ NNS         
+theories of                                  NNS IN         
+of molecular                                 IN JJ          
+molecular structure                          JJ NN          
+structure and                                NN CC          
+and bonding                                  CC NN          
+bonding such                                 NN JJ          
+such as                                      JJ IN          
+as the                                       IN DT          
+the electrochemical                          DT JJ          
+electrochemical theory                       JJ NN          
+theory of                                    NN IN          
+of valence                                   IN NN          
+valence originally                           NN RB          
+originally explained                         RB VBN         
+explained by                                 VBN IN         
+by Richard                                   IN NNP         
+Richard Abegg                                NNP NNP        
+Abegg in                                     NNP IN         
+in 1904                                      IN CD          
+1904 Abegg                                   CD NNP         
+Abegg was                                    NNP VBD        
+was a                                        VBD DT         
+a German                                     DT JJ          
+German chemist                               JJ NN          
+chemist and                                  NN CC          
+and pioneer                                  CC NN          
+pioneer of                                   NN IN          
+of valence                                   IN NN          
+valence theory                               NN NN          
+theory                                       NN             
++===============================================================+
+
++===============================================================+
+Sentence: HE proposed that  the difference of  the maximum position and negative valence of  an element tends  to  be  eight.
+
+Word            POS     Ent.           N.Ent.
+-----------------------------------------------------------------
+HE              PRP     O                   
+proposed        VBD     O                   
+that            IN      O                   
+the             DT      O                   
+difference      NN      O                   
+of              IN      O                   
+the             DT      O                   
+maximum         NN      O                   
+position        NN      O                   
+and             CC      O                   
+negative        JJ      O                   
+valence         NN      O                   
+of              IN      O                   
+an              DT      O                   
+element         NN      O                   
+tends           VBZ     O                   
+to              TO      O                   
+be              VB      O                   
+eight           CD      NUMBER         8.0  
+.               .       O                   
+
+Dependency graph:
+-> proposed/VBD (root)
+  -> HE/PRP (nsubj)
+  -> tends/VBZ (ccomp)
+    -> that/IN (mark)
+    -> difference/NN (nsubj)
+      -> the/DT (det)
+      -> position/NN (nmod:of)
+        -> of/IN (case)
+        -> the/DT (det)
+        -> maximum/NN (compound)
+        -> and/CC (cc)
+        -> valence/NN (conj:and)
+          -> negative/JJ (amod)
+        -> element/NN (nmod:of)
+          -> of/IN (case)
+          -> an/DT (det)
+      -> valence/NN (nmod:of)
+    -> eight/CD (xcomp)
+      -> to/TO (mark)
+      -> be/VB (cop)
+  -> ./. (punct)
+
+2-grams
+--------
+HE proposed                                  PRP VBD        
+proposed that                                VBD IN         
+that the                                     IN DT          
+the difference                               DT NN          
+difference of                                NN IN          
+of the                                       IN DT          
+the maximum                                  DT NN          
+maximum position                             NN NN          
+position and                                 NN CC          
+and negative                                 CC JJ          
+negative valence                             JJ NN          
+valence of                                   NN IN          
+of an                                        IN DT          
+an element                                   DT NN          
+element tends                                NN VBZ         
+tends to                                     VBZ TO         
+to be                                        TO VB          
+be eight                                     VB CD          
+eight                                        CD             
++===============================================================+
+
++===============================================================+
+Sentence: That  proposition,  known  as  Abegg’s  rule  was  extrmemely influential in Lewis’ entire theory as it all revolves around the eight electrons that can  be  shared.
+
+Word            POS     Ent.           N.Ent.
+-----------------------------------------------------------------
+That            DT      O                   
+proposition     NN      O                   
+,               ,       O                   
+known           VBN     O                   
+as              IN      O                   
+Abegg           NNP     PERSON              
+'s              POS     O                   
+rule            NN      O                   
+was             VBD     O                   
+extrmemely      JJ      O                   
+influential     JJ      O                   
+in              IN      O                   
+Lewis           NNP     PERSON              
+'               POS     O                   
+entire          JJ      O                   
+theory          NN      O                   
+as              IN      O                   
+it              PRP     O                   
+all             DT      O                   
+revolves        VBZ     O                   
+around          IN      O                   
+the             DT      O                   
+eight           CD      NUMBER         8.0  
+electrons       NNS     O                   
+that            WDT     O                   
+can             MD      O                   
+be              VB      O                   
+shared          VBN     O                   
+.               .       O                   
+
+Dependency graph:
+-> influential/JJ (root)
+  -> proposition/NN (nsubj)
+    -> That/DT (det)
+    -> ,/, (punct)
+    -> known/VBN (acl)
+      -> rule/NN (nmod:as)
+        -> as/IN (case)
+        -> Abegg/NNP (nmod:poss)
+          -> 's/POS (case)
+  -> was/VBD (cop)
+  -> extrmemely/JJ (amod)
+  -> theory/NN (nmod:in)
+    -> in/IN (case)
+    -> Lewis/NNP (nmod:poss)
+      -> '/POS (case)
+    -> entire/JJ (amod)
+  -> revolves/VBZ (advcl)
+    -> as/IN (mark)
+    -> it/PRP (nsubj)
+    -> all/DT (advmod)
+    -> electrons/NNS (nmod:around)
+      -> around/IN (case)
+      -> the/DT (det)
+      -> eight/CD (nummod)
+      -> shared/VBN (acl:relcl)
+        -> that/WDT (nsubjpass)
+        -> can/MD (aux)
+        -> be/VB (auxpass)
+  -> ./. (punct)
+
+2-grams
+--------
+That proposition                             DT NN          
+proposition known                            NN VBN         
+known as                                     VBN IN         
+as Abegg                                     IN NNP         
+Abegg 's                                     NNP POS        
+'s rule                                      POS NN         
+rule was                                     NN VBD         
+was extrmemely                               VBD JJ         
+extrmemely influential                       JJ JJ          
+influential in                               JJ IN          
+in Lewis                                     IN NNP         
+Lewis '                                      NNP POS        
+' entire                                     POS JJ         
+entire theory                                JJ NN          
+theory as                                    NN IN          
+as it                                        IN PRP         
+it all                                       PRP DT         
+all revolves                                 DT VBZ         
+revolves around                              VBZ IN         
+around the                                   IN DT          
+the eight                                    DT CD          
+eight electrons                              CD NNS         
+electrons that                               NNS WDT        
+that can                                     WDT MD         
+can be                                       MD VB          
+be shared                                    VB VBN         
+shared                                       VBN            
++===============================================================+
+
++===============================================================+
+Sentence: Lewis  showed  that  one  can  show  how  a  single  molecule  may, according to its environment, pass from the extreme polar to the extreme nonpolar form.
+
+Word            POS     Ent.           N.Ent.
+-----------------------------------------------------------------
+Lewis           NNP     PERSON              
+showed          VBD     O                   
+that            IN      O                   
+one             PRP     NUMBER         1.0  
+can             MD      O                   
+show            VB      O                   
+how             WRB     O                   
+a               DT      O                   
+single          JJ      O                   
+molecule        NN      O                   
+may             MD      O                   
+,               ,       O                   
+according       VBG     O                   
+to              TO      O                   
+its             PRP$    O                   
+environment     NN      O                   
+,               ,       O                   
+pass            NN      O                   
+from            IN      O                   
+the             DT      O                   
+extreme         JJ      O                   
+polar           JJ      O                   
+to              TO      O                   
+the             DT      O                   
+extreme         JJ      O                   
+nonpolar        JJ      O                   
+form            NN      O                   
+.               .       O                   
+
+Dependency graph:
+-> showed/VBD (root)
+  -> Lewis/NNP (nsubj)
+  -> show/VB (ccomp)
+    -> that/IN (mark)
+    -> one/PRP (nsubj)
+    -> can/MD (aux)
+    -> may/MD (ccomp)
+      -> how/WRB (advmod)
+      -> molecule/NN (nsubj)
+        -> a/DT (det)
+        -> single/JJ (amod)
+  -> ,/, (punct)
+  -> environment/NN (nmod:according_to)
+    -> according/VBG (case)
+      -> to/TO (mwe)
+    -> its/PRP$ (nmod:poss)
+    -> ,/, (punct)
+    -> pass/NN (appos)
+      -> polar/JJ (nmod:from)
+        -> from/IN (case)
+        -> the/DT (det)
+        -> extreme/JJ (amod)
+        -> form/NN (nmod:to)
+          -> to/TO (case)
+          -> the/DT (det)
+          -> extreme/JJ (amod)
+          -> nonpolar/JJ (amod)
+  -> ./. (punct)
+
+2-grams
+--------
+Lewis showed                                 NNP VBD        
+showed that                                  VBD IN         
+that one                                     IN PRP         
+one can                                      PRP MD         
+can show                                     MD VB          
+show how                                     VB WRB         
+how a                                        WRB DT         
+a single                                     DT JJ          
+single molecule                              JJ NN          
+molecule may                                 NN MD          
+may according                                MD VBG         
+according to                                 VBG TO         
+to its                                       TO PRP$        
+its environment                              PRP$ NN        
+environment pass                             NN NN          
+pass from                                    NN IN          
+from the                                     IN DT          
+the extreme                                  DT JJ          
+extreme polar                                JJ JJ          
+polar to                                     JJ TO          
+to the                                       TO DT          
+the extreme                                  DT JJ          
+extreme nonpolar                             JJ JJ          
+nonpolar form                                JJ NN          
+form                                         NN             
++===============================================================+
+
++===============================================================+
+Sentence: Lewis structures show only the valence electrons in the atom or molecule.
+
+Word            POS     Ent.           N.Ent.
+-----------------------------------------------------------------
+Lewis           NNP     PERSON              
+structures      NNS     O                   
+show            VBP     O                   
+only            RB      O                   
+the             DT      O                   
+valence         NN      O                   
+electrons       NNS     O                   
+in              IN      O                   
+the             DT      O                   
+atom            NN      O                   
+or              CC      O                   
+molecule        NN      O                   
+.               .       O                   
+
+Dependency graph:
+-> show/VBP (root)
+  -> structures/NNS (nsubj)
+    -> Lewis/NNP (compound)
+  -> electrons/NNS (dobj)
+    -> only/RB (advmod)
+    -> the/DT (det)
+    -> valence/NN (compound)
+    -> atom/NN (nmod:in)
+      -> in/IN (case)
+      -> the/DT (det)
+      -> or/CC (cc)
+      -> molecule/NN (conj:or)
+    -> molecule/NN (nmod:in)
+  -> ./. (punct)
+
+2-grams
+--------
+Lewis structures                             NNP NNS        
+structures show                              NNS VBP        
+show only                                    VBP RB         
+only the                                     RB DT          
+the valence                                  DT NN          
+valence electrons                            NN NNS         
+electrons in                                 NNS IN         
+in the                                       IN DT          
+the atom                                     DT NN          
+atom or                                      NN CC          
+or molecule                                  CC NN          
+molecule                                     NN             
++===============================================================+
+
++===============================================================+
+Sentence: In the structure,  the nuclei  and inner electrons of  the atom are represented by the symbol of the element.
+
+Word            POS     Ent.           N.Ent.
+-----------------------------------------------------------------
+In              IN      O                   
+the             DT      O                   
+structure       NN      O                   
+,               ,       O                   
+the             DT      O                   
+nuclei          NNS     O                   
+and             CC      O                   
+inner           JJ      O                   
+electrons       NNS     O                   
+of              IN      O                   
+the             DT      O                   
+atom            NN      O                   
+are             VBP     O                   
+represented     VBN     O                   
+by              IN      O                   
+the             DT      O                   
+symbol          NN      O                   
+of              IN      O                   
+the             DT      O                   
+element         NN      O                   
+.               .       O                   
+
+Dependency graph:
+-> represented/VBN (root)
+  -> structure/NN (nmod:in)
+    -> In/IN (case)
+    -> the/DT (det)
+  -> ,/, (punct)
+  -> nuclei/NNS (nsubjpass)
+    -> the/DT (det)
+    -> and/CC (cc)
+    -> electrons/NNS (conj:and)
+      -> inner/JJ (amod)
+      -> atom/NN (nmod:of)
+        -> of/IN (case)
+        -> the/DT (det)
+  -> electrons/NNS (nsubjpass)
+  -> are/VBP (auxpass)
+  -> symbol/NN (nmod:agent)
+    -> by/IN (case)
+    -> the/DT (det)
+    -> element/NN (nmod:of)
+      -> of/IN (case)
+      -> the/DT (det)
+  -> ./. (punct)
+
+2-grams
+--------
+In the                                       IN DT          
+the structure                                DT NN          
+structure the                                NN DT          
+the nuclei                                   DT NNS         
+nuclei and                                   NNS CC         
+and inner                                    CC JJ          
+inner electrons                              JJ NNS         
+electrons of                                 NNS IN         
+of the                                       IN DT          
+the atom                                     DT NN          
+atom are                                     NN VBP         
+are represented                              VBP VBN        
+represented by                               VBN IN         
+by the                                       IN DT          
+the symbol                                   DT NN          
+symbol of                                    NN IN          
+of the                                       IN DT          
+the element                                  DT NN          
+element                                      NN             
++===============================================================+
+
++===============================================================+
+Sentence: Each side of the chemical symbol can hold up to two valence electrons, with the maximum valence electrons that can be held being 8 because of the four sides.
+
+Word            POS     Ent.           N.Ent.
+-----------------------------------------------------------------
+Each            DT      O                   
+side            NN      O                   
+of              IN      O                   
+the             DT      O                   
+chemical        NN      O                   
+symbol          NN      O                   
+can             MD      O                   
+hold            VB      O                   
+up              RP      O                   
+to              TO      O                   
+two             CD      NUMBER         <=2.0
+valence         NN      O                   
+electrons       NNS     O                   
+,               ,       O                   
+with            IN      O                   
+the             DT      O                   
+maximum         NN      O                   
+valence         NN      O                   
+electrons       NNS     O                   
+that            WDT     O                   
+can             MD      O                   
+be              VB      O                   
+held            VBN     O                   
+being           VBG     O                   
+8               CD      NUMBER         8.0  
+because         IN      O                   
+of              IN      O                   
+the             DT      O                   
+four            CD      NUMBER         4.0  
+sides           NNS     O                   
+.               .       O                   
+
+Dependency graph:
+-> hold/VB (root)
+  -> side/NN (nsubj)
+    -> Each/DT (det)
+    -> symbol/NN (nmod:of)
+      -> of/IN (case)
+      -> the/DT (det)
+      -> chemical/NN (compound)
+  -> can/MD (aux)
+  -> up/RP (compound:prt)
+  -> electrons/NNS (nmod:to)
+    -> to/TO (case)
+    -> two/CD (nummod)
+    -> valence/NN (compound)
+  -> ,/, (punct)
+  -> electrons/NNS (nmod:with)
+    -> with/IN (case)
+    -> the/DT (det)
+    -> maximum/NN (compound)
+    -> valence/NN (compound)
+    -> held/VBN (acl:relcl)
+      -> that/WDT (nsubjpass)
+      -> can/MD (aux)
+      -> be/VB (auxpass)
+      -> 8/CD (xcomp)
+        -> being/VBG (cop)
+        -> sides/NNS (nmod:of)
+          -> because/IN (case)
+          -> of/IN (case)
+          -> the/DT (det)
+          -> four/CD (nummod)
+  -> ./. (punct)
+
+2-grams
+--------
+Each side                                    DT NN          
+side of                                      NN IN          
+of the                                       IN DT          
+the chemical                                 DT NN          
+chemical symbol                              NN NN          
+symbol can                                   NN MD          
+can hold                                     MD VB          
+hold up                                      VB RP          
+up to                                        RP TO          
+to two                                       TO CD          
+two valence                                  CD NN          
+valence electrons                            NN NNS         
+electrons with                               NNS IN         
+with the                                     IN DT          
+the maximum                                  DT NN          
+maximum valence                              NN NN          
+valence electrons                            NN NNS         
+electrons that                               NNS WDT        
+that can                                     WDT MD         
+can be                                       MD VB          
+be held                                      VB VBN         
+held being                                   VBN VBG        
+being 8                                      VBG CD         
+8 because                                    CD IN          
+because of                                   IN IN          
+of the                                       IN DT          
+the four                                     DT CD          
+four sides                                   CD NNS         
+sides                                        NNS            
++===============================================================+
+
++===============================================================+
+Sentence: Lewis initially represented the “electron shells” as cubes rather than the circles used in the modern day dot and cross model.
+
+Word            POS     Ent.           N.Ent.
+-----------------------------------------------------------------
+Lewis           NNP     PERSON              
+initially       RB      O                   
+represented     VBD     O                   
+the             DT      O                   
+``              ``      O                   
+electron        NN      O                   
+shells          NNS     O                   
+''              ''      O                   
+as              IN      O                   
+cubes           NNS     O                   
+rather          RB      O                   
+than            IN      O                   
+the             DT      O                   
+circles         NNS     O                   
+used            VBN     O                   
+in              IN      O                   
+the             DT      DATE           THIS P1D
+modern          JJ      DATE           THIS P1D
+day             NN      DATE           THIS P1D
+dot             NN      O                   
+and             CC      O                   
+cross           VB      O                   
+model           NN      O                   
+.               .       O                   
+
+Dependency graph:
+-> represented/VBD (root)
+  -> Lewis/NNP (nsubj)
+  -> initially/RB (advmod)
+  -> shells/NNS (dobj)
+    -> the/DT (det)
+    -> ``/`` (punct)
+    -> electron/NN (compound)
+    -> ''/'' (punct)
+  -> cubes/NNS (nmod:as)
+    -> as/IN (case)
+    -> rather/RB (cc)
+      -> than/IN (mwe)
+    -> circles/NNS (conj:negcc)
+      -> the/DT (det)
+      -> used/VBN (acl)
+        -> dot/NN (nmod:in)
+          -> in/IN (case)
+          -> the/DT (det)
+          -> modern/JJ (amod)
+          -> day/NN (compound)
+  -> circles/NNS (nmod:as)
+  -> and/CC (cc)
+  -> cross/VB (conj:and)
+    -> Lewis/NNP (nsubj)
+    -> model/NN (dobj)
+  -> ./. (punct)
+
+2-grams
+--------
+Lewis initially                              NNP RB         
+initially represented                        RB VBD         
+represented the                              VBD DT         
+the ``                                       DT ``          
+`` electron                                  `` NN          
+electron shells                              NN NNS         
+shells ''                                    NNS ''         
+'' as                                        '' IN          
+as cubes                                     IN NNS         
+cubes rather                                 NNS RB         
+rather than                                  RB IN          
+than the                                     IN DT          
+the circles                                  DT NNS         
+circles used                                 NNS VBN        
+used in                                      VBN IN         
+in the                                       IN DT          
+the modern                                   DT JJ          
+modern day                                   JJ NN          
+day dot                                      NN NN          
+dot and                                      NN CC          
+and cross                                    CC VB          
+cross model                                  VB NN          
+model                                        NN             
++===============================================================+
+
++===============================================================+
+Sentence: Below is the image of how he represented the structure of atoms in 1916.
+
+Word            POS     Ent.           N.Ent.
+-----------------------------------------------------------------
+Below           NNP     O                   
+is              VBZ     O                   
+the             DT      O                   
+image           NN      O                   
+of              IN      O                   
+how             WRB     O                   
+he              PRP     O                   
+represented     VBD     O                   
+the             DT      O                   
+structure       NN      O                   
+of              IN      O                   
+atoms           NNS     O                   
+in              IN      O                   
+1916            CD      DATE           1916 
+.               .       O                   
+
+Dependency graph:
+-> image/NN (root)
+  -> Below/NNP (nsubj)
+  -> is/VBZ (cop)
+  -> the/DT (det)
+  -> represented/VBD (acl)
+    -> of/IN (mark)
+    -> how/WRB (advmod)
+    -> he/PRP (nsubj)
+    -> structure/NN (dobj)
+      -> the/DT (det)
+      -> atoms/NNS (nmod:of)
+        -> of/IN (case)
+    -> 1916/CD (nmod:in)
+      -> in/IN (case)
+  -> ./. (punct)
+
+2-grams
+--------
+Below is                                     NNP VBZ        
+is the                                       VBZ DT         
+the image                                    DT NN          
+image of                                     NN IN          
+of how                                       IN WRB         
+how he                                       WRB PRP        
+he represented                               PRP VBD        
+represented the                              VBD DT         
+the structure                                DT NN          
+structure of                                 NN IN          
+of atoms                                     IN NNS         
+atoms in                                     NNS IN         
+in 1916                                      IN CD          
+1916                                         CD             
++===============================================================+
+
++===============================================================+
+Sentence: 23326261-b684-4276-8e0a-36e6c5ba90df - Chemistry 130 SSG Fall 13 - P4D2.
+
+Word            POS     Ent.           N.Ent.
+-----------------------------------------------------------------
+23326261-b684-4276-8e0a-36e6c5ba90dfJJ      O                   
+-               :       O                   
+Chemistry       NNP     O                   
+130             CD      NUMBER         130.0
+SSG             NNP     O                   
+Fall            NN      DATE           XXXX-FA
+13              CD      NUMBER         13.0 
+-               :       O                   
+P4D2            NN      O                   
+.               .       O                   
+
+Dependency graph:
+-> 23326261-b684-4276-8e0a-36e6c5ba90df/JJ (root)
+  -> -/: (punct)
+  -> Chemistry/NNP (dep)
+    -> 130/CD (nummod)
+    -> Fall/NN (dep)
+      -> SSG/NNP (compound)
+      -> 13/CD (nummod)
+    -> -/: (punct)
+    -> P4D2/NN (dep)
+  -> ./. (punct)
+
+2-grams
+--------
+23326261-b684-4276-8e0a-36e6c5ba90df ChemistryJJ NNP         
+Chemistry 130                                NNP CD         
+130 SSG                                      CD NNP         
+SSG Fall                                     NNP NN         
+Fall 13                                      NN CD          
+13 P4D2                                      CD NN          
+P4D2                                         NN             
++===============================================================+
+
++===============================================================+
+Sentence: Page 1 of 4
+He represented the bonding of the elements by combining the cubes.In Lewis’ publication he emphasized the importance of valence electrons for chemical  bonding.
+
+Word            POS     Ent.           N.Ent.
+-----------------------------------------------------------------
+Page            NNP     O                   
+1               CD      NUMBER         1.0  
+of              IN      O                   
+4               CD      NUMBER         4.0  
+He              PRP     O                   
+represented     VBD     O                   
+the             DT      O                   
+bonding         NN      O                   
+of              IN      O                   
+the             DT      O                   
+elements        NNS     O                   
+by              IN      O                   
+combining       VBG     O                   
+the             DT      O                   
+cubes.In        NNP     O                   
+Lewis           NNP     PERSON              
+'               POS     O                   
+publication     NN      O                   
+he              PRP     O                   
+emphasized      VBD     O                   
+the             DT      O                   
+importance      NN      O                   
+of              IN      O                   
+valence         NN      O                   
+electrons       NNS     O                   
+for             IN      O                   
+chemical        NN      O                   
+bonding         NN      O                   
+.               .       O                   
+
+Dependency graph:
+-> emphasized/VBD (root)
+  -> represented/VBD (dep)
+    -> Page/NNP (nmod:tmod)
+      -> 1/CD (nummod)
+      -> 4/CD (nmod:of)
+        -> of/IN (case)
+    -> He/PRP (nsubj)
+    -> bonding/NN (dobj)
+      -> the/DT (det)
+      -> elements/NNS (nmod:of)
+        -> of/IN (case)
+        -> the/DT (det)
+    -> combining/VBG (advcl)
+      -> by/IN (mark)
+      -> publication/NN (dobj)
+        -> Lewis/NNP (nmod:poss)
+          -> the/DT (det)
+          -> cubes.In/NNP (compound)
+          -> '/POS (case)
+  -> he/PRP (nsubj)
+  -> importance/NN (dobj)
+    -> the/DT (det)
+    -> electrons/NNS (nmod:of)
+      -> of/IN (case)
+      -> valence/NN (compound)
+  -> bonding/NN (nmod:for)
+    -> for/IN (case)
+    -> chemical/NN (compound)
+  -> ./. (punct)
+
+2-grams
+--------
+Page 1                                       NNP CD         
+1 of                                         CD IN          
+of 4                                         IN CD          
+4 He                                         CD PRP         
+He represented                               PRP VBD        
+represented the                              VBD DT         
+the bonding                                  DT NN          
+bonding of                                   NN IN          
+of the                                       IN DT          
+the elements                                 DT NNS         
+elements by                                  NNS IN         
+by combining                                 IN VBG         
+combining the                                VBG DT         
+the cubes.In                                 DT NNP         
+cubes.In Lewis                               NNP NNP        
+Lewis '                                      NNP POS        
+' publication                                POS NN         
+publication he                               NN PRP         
+he emphasized                                PRP VBD        
+emphasized the                               VBD DT         
+the importance                               DT NN          
+importance of                                NN IN          
+of valence                                   IN NN          
+valence electrons                            NN NNS         
+electrons for                                NNS IN         
+for chemical                                 IN NN          
+chemical bonding                             NN NN          
+bonding                                      NN             
++===============================================================+
+
++===============================================================+
+Sentence: When  discussing  covalent  bonds  (the  sharing  of  electrons between elements) Lewis explained that atoms can have a double or triple bond with other atoms when electrons are shared.
+
+Word            POS     Ent.           N.Ent.
+-----------------------------------------------------------------
+When            WRB     O                   
+discussing      VBG     O                   
+covalent        JJ      O                   
+bonds           NNS     O                   
+-LRB-           -LRB-   O                   
+the             DT      O                   
+sharing         NN      O                   
+of              IN      O                   
+electrons       NNS     O                   
+between         IN      O                   
+elements        NNS     O                   
+-RRB-           -RRB-   O                   
+Lewis           NNP     PERSON              
+explained       VBD     O                   
+that            IN      O                   
+atoms           NNS     O                   
+can             MD      O                   
+have            VB      O                   
+a               DT      O                   
+double          JJ      O                   
+or              CC      O                   
+triple          JJ      O                   
+bond            NN      O                   
+with            IN      O                   
+other           JJ      O                   
+atoms           NNS     O                   
+when            WRB     O                   
+electrons       NNS     O                   
+are             VBP     O                   
+shared          VBN     O                   
+.               .       O                   
+
+Dependency graph:
+-> explained/VBD (root)
+  -> discussing/VBG (advcl)
+    -> When/WRB (advmod)
+    -> bonds/NNS (dobj)
+      -> covalent/JJ (amod)
+      -> sharing/NN (dep)
+        -> -LRB-/-LRB- (punct)
+        -> the/DT (det)
+        -> electrons/NNS (nmod:of)
+          -> of/IN (case)
+          -> elements/NNS (nmod:between)
+            -> between/IN (case)
+        -> -RRB-/-RRB- (punct)
+  -> Lewis/NNP (nsubj)
+  -> have/VB (ccomp)
+    -> that/IN (mark)
+    -> atoms/NNS (nsubj)
+    -> can/MD (aux)
+    -> bond/NN (dobj)
+      -> a/DT (det)
+      -> double/JJ (amod)
+        -> or/CC (cc)
+        -> triple/JJ (conj:or)
+      -> triple/JJ (amod)
+      -> atoms/NNS (nmod:with)
+        -> with/IN (case)
+        -> other/JJ (amod)
+    -> shared/VBN (advcl)
+      -> when/WRB (advmod)
+      -> electrons/NNS (nsubjpass)
+      -> are/VBP (auxpass)
+  -> ./. (punct)
+
+2-grams
+--------
+When discussing                              WRB VBG        
+discussing covalent                          VBG JJ         
+covalent bonds                               JJ NNS         
+bonds the                                    NNS DT         
+the sharing                                  DT NN          
+sharing of                                   NN IN          
+of electrons                                 IN NNS         
+electrons between                            NNS IN         
+between elements                             IN NNS         
+elements Lewis                               NNS NNP        
+Lewis explained                              NNP VBD        
+explained that                               VBD IN         
+that atoms                                   IN NNS         
+atoms can                                    NNS MD         
+can have                                     MD VB          
+have a                                       VB DT          
+a double                                     DT JJ          
+double or                                    JJ CC          
+or triple                                    CC JJ          
+triple bond                                  JJ NN          
+bond with                                    NN IN          
+with other                                   IN JJ          
+other atoms                                  JJ NNS         
+atoms when                                   NNS WRB        
+when electrons                               WRB NNS        
+electrons are                                NNS VBP        
+are shared                                   VBP VBN        
+shared                                       VBN            
++===============================================================+
+
++===============================================================+
+Sentence: He went on to explain the weakness of these double and triple bonds.
+
+Word            POS     Ent.           N.Ent.
+-----------------------------------------------------------------
+He              PRP     O                   
+went            VBD     O                   
+on              IN      O                   
+to              TO      O                   
+explain         VB      O                   
+the             DT      O                   
+weakness        NN      O                   
+of              IN      O                   
+these           DT      O                   
+double          JJ      O                   
+and             CC      O                   
+triple          JJ      O                   
+bonds           NNS     O                   
+.               .       O                   
+
+Dependency graph:
+-> went/VBD (root)
+  -> He/PRP (nsubj)
+  -> on/IN (nmod)
+  -> explain/VB (xcomp)
+    -> to/TO (mark)
+    -> weakness/NN (dobj)
+      -> the/DT (det)
+      -> bonds/NNS (nmod:of)
+        -> of/IN (case)
+        -> these/DT (det)
+        -> double/JJ (amod)
+          -> and/CC (cc)
+          -> triple/JJ (conj:and)
+        -> triple/JJ (amod)
+  -> ./. (punct)
+
+2-grams
+--------
+He went                                      PRP VBD        
+went on                                      VBD IN         
+on to                                        IN TO          
+to explain                                   TO VB          
+explain the                                  VB DT          
+the weakness                                 DT NN          
+weakness of                                  NN IN          
+of these                                     IN DT          
+these double                                 DT JJ          
+double and                                   JJ CC          
+and triple                                   CC JJ          
+triple bonds                                 JJ NNS         
+bonds                                        NNS            
++===============================================================+
+
++===============================================================+
+Sentence: These bonds as he mentioned can be broken; he even said that a characteristic feature of the double bond is its tendency to “break.”
+
+Word            POS     Ent.           N.Ent.
+-----------------------------------------------------------------
+These           DT      O                   
+bonds           NNS     O                   
+as              IN      O                   
+he              PRP     O                   
+mentioned       VBD     O                   
+can             MD      O                   
+be              VB      O                   
+broken          VBN     O                   
+;               :       O                   
+he              PRP     O                   
+even            RB      O                   
+said            VBD     O                   
+that            IN      O                   
+a               DT      O                   
+characteristic  JJ      O                   
+feature         NN      O                   
+of              IN      O                   
+the             DT      O                   
+double          JJ      O                   
+bond            NN      O                   
+is              VBZ     O                   
+its             PRP$    O                   
+tendency        NN      O                   
+to              TO      O                   
+``              ``      O                   
+break           VB      O                   
+.               .       O                   
+''              ''      O                   
+
+Dependency graph:
+-> broken/VBN (root)
+  -> bonds/NNS (nsubjpass)
+    -> These/DT (det)
+    -> mentioned/VBD (acl:relcl)
+      -> as/IN (mark)
+      -> he/PRP (nsubj)
+  -> can/MD (aux)
+  -> be/VB (auxpass)
+  -> ;/: (punct)
+  -> said/VBD (parataxis)
+    -> he/PRP (nsubj)
+    -> even/RB (advmod)
+    -> tendency/NN (ccomp)
+      -> that/IN (mark)
+      -> feature/NN (nsubj)
+        -> a/DT (det)
+        -> characteristic/JJ (amod)
+        -> bond/NN (nmod:of)
+          -> of/IN (case)
+          -> the/DT (det)
+          -> double/JJ (amod)
+      -> is/VBZ (cop)
+      -> its/PRP$ (nmod:poss)
+      -> break/VB (acl)
+        -> to/TO (mark)
+        -> ``/`` (punct)
+  -> ./. (punct)
+  -> ''/'' (punct)
+
+2-grams
+--------
+These bonds                                  DT NNS         
+bonds as                                     NNS IN         
+as he                                        IN PRP         
+he mentioned                                 PRP VBD        
+mentioned can                                VBD MD         
+can be                                       MD VB          
+be broken                                    VB VBN         
+broken he                                    VBN PRP        
+he even                                      PRP RB         
+even said                                    RB VBD         
+said that                                    VBD IN         
+that a                                       IN DT          
+a characteristic                             DT JJ          
+characteristic feature                       JJ NN          
+feature of                                   NN IN          
+of the                                       IN DT          
+the double                                   DT JJ          
+double bond                                  JJ NN          
+bond is                                      NN VBZ         
+is its                                       VBZ PRP$       
+its tendency                                 PRP$ NN        
+tendency to                                  NN TO          
+to ``                                        TO ``          
+`` break                                     `` VB          
+break ''                                     VB ''          
+''                                           ''             
++===============================================================+
+
++===============================================================+
+Sentence: When the double bond breaks, “it leaves the two atoms concerned in the odd state, each with  an  unpaired  electron  in  the  shell.”
+
+Word            POS     Ent.           N.Ent.
+-----------------------------------------------------------------
+When            WRB     O                   
+the             DT      O                   
+double          JJ      O                   
+bond            NN      O                   
+breaks          NNS     O                   
+,               ,       O                   
+``              ``      O                   
+it              PRP     O                   
+leaves          VBZ     O                   
+the             DT      O                   
+two             CD      NUMBER         2.0  
+atoms           NNS     O                   
+concerned       VBN     O                   
+in              IN      O                   
+the             DT      O                   
+odd             JJ      O                   
+state           NN      O                   
+,               ,       O                   
+each            DT      O                   
+with            IN      O                   
+an              DT      O                   
+unpaired        JJ      O                   
+electron        NN      O                   
+in              IN      O                   
+the             DT      O                   
+shell           NN      O                   
+.               .       O                   
+''              ''      O                   
+
+Dependency graph:
+-> leaves/VBZ (root)
+  -> breaks/NNS (advcl)
+    -> When/WRB (advmod)
+    -> the/DT (det)
+    -> double/JJ (amod)
+    -> bond/NN (compound)
+  -> ,/, (punct)
+  -> it/PRP (nsubj)
+    -> ``/`` (punct)
+  -> atoms/NNS (dobj)
+    -> the/DT (det)
+    -> two/CD (nummod)
+    -> concerned/VBN (acl)
+      -> state/NN (nmod:in)
+        -> in/IN (case)
+        -> the/DT (det)
+        -> odd/JJ (amod)
+        -> ,/, (punct)
+        -> each/DT (appos)
+      -> electron/NN (nmod:with)
+        -> with/IN (case)
+        -> an/DT (det)
+        -> unpaired/JJ (amod)
+        -> shell/NN (nmod:in)
+          -> in/IN (case)
+          -> the/DT (det)
+  -> ./. (punct)
+  -> ''/'' (punct)
+
+2-grams
+--------
+When the                                     WRB DT         
+the double                                   DT JJ          
+double bond                                  JJ NN          
+bond breaks                                  NN NNS         
+breaks ``                                    NNS ``         
+`` it                                        `` PRP         
+it leaves                                    PRP VBZ        
+leaves the                                   VBZ DT         
+the two                                      DT CD          
+two atoms                                    CD NNS         
+atoms concerned                              NNS VBN        
+concerned in                                 VBN IN         
+in the                                       IN DT          
+the odd                                      DT JJ          
+odd state                                    JJ NN          
+state each                                   NN DT          
+each with                                    DT IN          
+with an                                      IN DT          
+an unpaired                                  DT JJ          
+unpaired electron                            JJ NN          
+electron in                                  NN IN          
+in the                                       IN DT          
+the shell                                    DT NN          
+shell ''                                     NN ''          
+''                                           ''             
++===============================================================+
+
++===============================================================+
+Sentence: The  triple  bond  represents  the  highest possible degree of union between two atoms.
+
+Word            POS     Ent.           N.Ent.
+-----------------------------------------------------------------
+The             DT      O                   
+triple          JJ      O                   
+bond            NN      O                   
+represents      VBZ     O                   
+the             DT      O                   
+highest         JJS     O                   
+possible        JJ      O                   
+degree          NN      O                   
+of              IN      O                   
+union           NN      O                   
+between         IN      O                   
+two             CD      NUMBER         2.0  
+atoms           NNS     O                   
+.               .       O                   
+
+Dependency graph:
+-> represents/VBZ (root)
+  -> bond/NN (nsubj)
+    -> The/DT (det)
+    -> triple/JJ (amod)
+  -> degree/NN (dobj)
+    -> the/DT (det)
+    -> highest/JJS (amod)
+    -> possible/JJ (amod)
+    -> union/NN (nmod:of)
+      -> of/IN (case)
+      -> atoms/NNS (nmod:between)
+        -> between/IN (case)
+        -> two/CD (nummod)
+  -> ./. (punct)
+
+2-grams
+--------
+The triple                                   DT JJ          
+triple bond                                  JJ NN          
+bond represents                              NN VBZ         
+represents the                               VBZ DT         
+the highest                                  DT JJS         
+highest possible                             JJS JJ         
+possible degree                              JJ NN          
+degree of                                    NN IN          
+of union                                     IN NN          
+union between                                NN IN          
+between two                                  IN CD          
+two atoms                                    CD NNS         
+atoms                                        NNS            
++===============================================================+
+
++===============================================================+
+Sentence: Similar to the double bond, the triple bond can have one bond break, thus producing two odd atoms, or it can also break so that the double bond does not break and rather a single bond and two atoms are  left behind, each of which has a pair of electrons which is not bound to any other  atom.
+
+Word            POS     Ent.           N.Ent.
+-----------------------------------------------------------------
+Similar         JJ      O                   
+to              TO      O                   
+the             DT      O                   
+double          JJ      O                   
+bond            NN      O                   
+,               ,       O                   
+the             DT      O                   
+triple          JJ      O                   
+bond            NN      O                   
+can             MD      O                   
+have            VB      O                   
+one             CD      NUMBER         1.0  
+bond            NN      O                   
+break           NN      O                   
+,               ,       O                   
+thus            RB      O                   
+producing       VBG     O                   
+two             CD      NUMBER         2.0  
+odd             JJ      O                   
+atoms           NNS     O                   
+,               ,       O                   
+or              CC      O                   
+it              PRP     O                   
+can             MD      O                   
+also            RB      O                   
+break           VB      O                   
+so              RB      O                   
+that            IN      O                   
+the             DT      O                   
+double          JJ      O                   
+bond            NN      O                   
+does            VBZ     O                   
+not             RB      O                   
+break           VB      O                   
+and             CC      O                   
+rather          RB      O                   
+a               DT      O                   
+single          JJ      O                   
+bond            NN      O                   
+and             CC      O                   
+two             CD      NUMBER         2.0  
+atoms           NNS     O                   
+are             VBP     O                   
+left            VBN     O                   
+behind          RP      O                   
+,               ,       O                   
+each            DT      O                   
+of              IN      O                   
+which           WDT     O                   
+has             VBZ     O                   
+a               DT      O                   
+pair            NN      O                   
+of              IN      O                   
+electrons       NNS     O                   
+which           WDT     O                   
+is              VBZ     O                   
+not             RB      O                   
+bound           VBN     O                   
+to              TO      O                   
+any             DT      O                   
+other           JJ      O                   
+atom            NN      O                   
+.               .       O                   
+
+Dependency graph:
+-> have/VB (root)
+  -> Similar/JJ (nsubj)
+    -> bond/NN (nmod:to)
+      -> to/TO (case)
+      -> the/DT (det)
+      -> double/JJ (amod)
+      -> ,/, (punct)
+      -> bond/NN (appos)
+        -> the/DT (det)
+        -> triple/JJ (amod)
+  -> can/MD (aux)
+  -> break/NN (dobj)
+    -> one/CD (nummod)
+    -> bond/NN (compound)
+    -> ,/, (punct)
+    -> producing/VBG (acl)
+      -> thus/RB (advmod)
+      -> atoms/NNS (dobj)
+        -> two/CD (nummod)
+        -> odd/JJ (amod)
+  -> ,/, (punct)
+  -> or/CC (cc)
+  -> break/VB (conj:or)
+    -> it/PRP (nsubj)
+    -> can/MD (aux)
+    -> also/RB (advmod)
+    -> break/VB (advcl)
+      -> so/RB (mark)
+        -> that/IN (mwe)
+      -> bond/NN (nsubj)
+        -> the/DT (det)
+        -> double/JJ (amod)
+      -> does/VBZ (aux)
+      -> not/RB (neg)
+      -> bond/NN (dobj)
+        -> rather/RB (cc)
+          -> and/CC (cc)
+        -> a/DT (det)
+        -> single/JJ (amod)
+        -> and/CC (cc)
+        -> atoms/NNS (conj:and)
+          -> two/CD (nummod)
+        -> left/VBN (dep)
+          -> are/VBP (auxpass)
+          -> behind/RP (compound:prt)
+        -> ,/, (punct)
+        -> each/DT (conj:and)
+          -> has/VBZ (acl)
+            -> of/IN (mark)
+            -> which/WDT (nsubj)
+            -> pair/NN (dobj)
+              -> a/DT (det)
+              -> electrons/NNS (nmod:of)
+                -> of/IN (case)
+                -> bound/VBN (acl:relcl)
+                  -> which/WDT (nsubjpass)
+                  -> is/VBZ (auxpass)
+                  -> not/RB (neg)
+                  -> atom/NN (nmod:to)
+                    -> to/TO (case)
+                    -> any/DT (det)
+                    -> other/JJ (amod)
+      -> atoms/NNS (dobj)
+      -> each/DT (dobj)
+  -> ./. (punct)
+
+2-grams
+--------
+Similar to                                   JJ TO          
+to the                                       TO DT          
+the double                                   DT JJ          
+double bond                                  JJ NN          
+bond the                                     NN DT          
+the triple                                   DT JJ          
+triple bond                                  JJ NN          
+bond can                                     NN MD          
+can have                                     MD VB          
+have one                                     VB CD          
+one bond                                     CD NN          
+bond break                                   NN NN          
+break thus                                   NN RB          
+thus producing                               RB VBG         
+producing two                                VBG CD         
+two odd                                      CD JJ          
+odd atoms                                    JJ NNS         
+atoms or                                     NNS CC         
+or it                                        CC PRP         
+it can                                       PRP MD         
+can also                                     MD RB          
+also break                                   RB VB          
+break so                                     VB RB          
+so that                                      RB IN          
+that the                                     IN DT          
+the double                                   DT JJ          
+double bond                                  JJ NN          
+bond does                                    NN VBZ         
+does not                                     VBZ RB         
+not break                                    RB VB          
+break and                                    VB CC          
+and rather                                   CC RB          
+rather a                                     RB DT          
+a single                                     DT JJ          
+single bond                                  JJ NN          
+bond and                                     NN CC          
+and two                                      CC CD          
+two atoms                                    CD NNS         
+atoms are                                    NNS VBP        
+are left                                     VBP VBN        
+left behind                                  VBN RP         
+behind each                                  RP DT          
+each of                                      DT IN          
+of which                                     IN WDT         
+which has                                    WDT VBZ        
+has a                                        VBZ DT         
+a pair                                       DT NN          
+pair of                                      NN IN          
+of electrons                                 IN NNS         
+electrons which                              NNS WDT        
+which is                                     WDT VBZ        
+is not                                       VBZ RB         
+not bound                                    RB VBN         
+bound to                                     VBN TO         
+to any                                       TO DT          
+any other                                    DT JJ          
+other atom                                   JJ NN          
+atom                                         NN             
++===============================================================+
+
++===============================================================+
+Sentence: 23326261-b684-4276-8e0a-36e6c5ba90df - Chemistry 130 SSG Fall 13 - P4D2.
+
+Word            POS     Ent.           N.Ent.
+-----------------------------------------------------------------
+23326261-b684-4276-8e0a-36e6c5ba90dfJJ      O                   
+-               :       O                   
+Chemistry       NNP     O                   
+130             CD      NUMBER         130.0
+SSG             NNP     O                   
+Fall            NN      DATE           XXXX-FA
+13              CD      NUMBER         13.0 
+-               :       O                   
+P4D2            NN      O                   
+.               .       O                   
+
+Dependency graph:
+-> 23326261-b684-4276-8e0a-36e6c5ba90df/JJ (root)
+  -> -/: (punct)
+  -> Chemistry/NNP (dep)
+    -> 130/CD (nummod)
+    -> Fall/NN (dep)
+      -> SSG/NNP (compound)
+      -> 13/CD (nummod)
+    -> -/: (punct)
+    -> P4D2/NN (dep)
+  -> ./. (punct)
+
+2-grams
+--------
+23326261-b684-4276-8e0a-36e6c5ba90df ChemistryJJ NNP         
+Chemistry 130                                NNP CD         
+130 SSG                                      CD NNP         
+SSG Fall                                     NNP NN         
+Fall 13                                      NN CD          
+13 P4D2                                      CD NN          
+P4D2                                         NN             
++===============================================================+
+
++===============================================================+
+Sentence: Page 2 of 4
+Furthermore, single bonds can change to multiple bonds and the two atomic shells have two pairs of electrons in common.
+
+Word            POS     Ent.           N.Ent.
+-----------------------------------------------------------------
+Page            NNP     O                   
+2               CD      NUMBER         2.0  
+of              IN      O                   
+4               CD      NUMBER         4.0  
+Furthermore     RB      O                   
+,               ,       O                   
+single          JJ      O                   
+bonds           NNS     O                   
+can             MD      O                   
+change          VB      O                   
+to              TO      O                   
+multiple        JJ      O                   
+bonds           NNS     O                   
+and             CC      O                   
+the             DT      O                   
+two             CD      NUMBER         2.0  
+atomic          JJ      O                   
+shells          NNS     O                   
+have            VBP     O                   
+two             CD      NUMBER         2.0  
+pairs           NNS     O                   
+of              IN      O                   
+electrons       NNS     O                   
+in              IN      O                   
+common          JJ      O                   
+.               .       O                   
+
+Dependency graph:
+-> have/VBP (root)
+  -> Page/NNP (nsubj)
+    -> 2/CD (nummod)
+    -> 4/CD (nmod:of)
+      -> of/IN (case)
+    -> change/VB (acl:relcl)
+      -> Furthermore/RB (advmod)
+      -> ,/, (punct)
+      -> bonds/NNS (nsubj)
+        -> single/JJ (amod)
+      -> can/MD (aux)
+      -> bonds/NNS (nmod:to)
+        -> to/TO (case)
+        -> multiple/JJ (amod)
+        -> and/CC (cc)
+        -> shells/NNS (conj:and)
+          -> the/DT (det)
+          -> two/CD (nummod)
+          -> atomic/JJ (amod)
+      -> shells/NNS (nmod:to)
+  -> pairs/NNS (dobj)
+    -> two/CD (nummod)
+    -> electrons/NNS (nmod:of)
+      -> of/IN (case)
+      -> common/JJ (nmod:in)
+        -> in/IN (case)
+  -> ./. (punct)
+
+2-grams
+--------
+Page 2                                       NNP CD         
+2 of                                         CD IN          
+of 4                                         IN CD          
+4 Furthermore                                CD RB          
+Furthermore single                           RB JJ          
+single bonds                                 JJ NNS         
+bonds can                                    NNS MD         
+can change                                   MD VB          
+change to                                    VB TO          
+to multiple                                  TO JJ          
+multiple bonds                               JJ NNS         
+bonds and                                    NNS CC         
+and the                                      CC DT          
+the two                                      DT CD          
+two atomic                                   CD JJ          
+atomic shells                                JJ NNS         
+shells have                                  NNS VBP        
+have two                                     VBP CD         
+two pairs                                    CD NNS         
+pairs of                                     NNS IN         
+of electrons                                 IN NNS         
+electrons in                                 NNS IN         
+in common                                    IN JJ          
+common                                       JJ             
++===============================================================+
+
++===============================================================+
+Sentence: When this happens, the “kernels” are forced closer together and the mutual repulsion weakens the bond.
+
+Word            POS     Ent.           N.Ent.
+-----------------------------------------------------------------
+When            WRB     O                   
+this            DT      O                   
+happens         VBZ     O                   
+,               ,       O                   
+the             DT      O                   
+``              ``      O                   
+kernels         NNS     O                   
+''              ''      O                   
+are             VBP     O                   
+forced          VBN     O                   
+closer          RBR     O                   
+together        RB      O                   
+and             CC      O                   
+the             DT      O                   
+mutual          JJ      O                   
+repulsion       NN      O                   
+weakens         VBZ     O                   
+the             DT      O                   
+bond            NN      O                   
+.               .       O                   
+
+Dependency graph:
+-> forced/VBN (root)
+  -> happens/VBZ (advcl)
+    -> When/WRB (advmod)
+    -> this/DT (nsubj)
+  -> ,/, (punct)
+  -> kernels/NNS (nsubjpass)
+    -> the/DT (det)
+    -> ``/`` (punct)
+    -> ''/'' (punct)
+  -> are/VBP (auxpass)
+  -> together/RB (advmod)
+    -> closer/RBR (advmod)
+  -> and/CC (cc)
+  -> weakens/VBZ (conj:and)
+    -> repulsion/NN (nsubj)
+      -> the/DT (det)
+      -> mutual/JJ (amod)
+    -> bond/NN (dobj)
+      -> the/DT (det)
+  -> ./. (punct)
+
+2-grams
+--------
+When this                                    WRB DT         
+this happens                                 DT VBZ         
+happens the                                  VBZ DT         
+the ``                                       DT ``          
+`` kernels                                   `` NNS         
+kernels ''                                   NNS ''         
+'' are                                       '' VBP         
+are forced                                   VBP VBN        
+forced closer                                VBN RBR        
+closer together                              RBR RB         
+together and                                 RB CC          
+and the                                      CC DT          
+the mutual                                   DT JJ          
+mutual repulsion                             JJ NN          
+repulsion weakens                            NN VBZ         
+weakens the                                  VBZ DT         
+the bond                                     DT NN          
+bond                                         NN             
++===============================================================+
+
++===============================================================+
+Sentence: With this being said, one can assume that “all atomic kernels repel one another,” and that molecules are  held  together  only  by  the  pairs  of  electrons  that  are  held  together  by  the component atoms.
+
+Word            POS     Ent.           N.Ent.
+-----------------------------------------------------------------
+With            IN      O                   
+this            DT      O                   
+being           VBG     O                   
+said            VBD     O                   
+,               ,       O                   
+one             PRP     NUMBER         1.0  
+can             MD      O                   
+assume          VB      O                   
+that            IN      O                   
+``              ``      O                   
+all             DT      O                   
+atomic          JJ      O                   
+kernels         NNS     O                   
+repel           VBP     O                   
+one             CD      NUMBER         1.0  
+another         DT      O                   
+,               ,       O                   
+''              ''      O                   
+and             CC      O                   
+that            IN      O                   
+molecules       NNS     O                   
+are             VBP     O                   
+held            VBN     O                   
+together        RB      O                   
+only            RB      O                   
+by              IN      O                   
+the             DT      O                   
+pairs           NNS     O                   
+of              IN      O                   
+electrons       NNS     O                   
+that            WDT     O                   
+are             VBP     O                   
+held            VBN     O                   
+together        RB      O                   
+by              IN      O                   
+the             DT      O                   
+component       NN      O                   
+atoms           NNS     O                   
+.               .       O                   
+
+Dependency graph:
+-> assume/VB (root)
+  -> this/DT (nmod:with)
+    -> With/IN (case)
+    -> said/VBD (acl)
+      -> being/VBG (auxpass)
+  -> ,/, (punct)
+  -> one/PRP (nsubj)
+  -> can/MD (aux)
+  -> repel/VBP (ccomp)
+    -> that/IN (mark)
+    -> ``/`` (punct)
+    -> kernels/NNS (nsubj)
+      -> all/DT (det)
+      -> atomic/JJ (amod)
+    -> one/CD (dobj)
+      -> another/DT (dep)
+    -> ,/, (punct)
+    -> ''/'' (punct)
+    -> and/CC (cc)
+    -> held/VBN (conj:and)
+      -> that/IN (mark)
+      -> molecules/NNS (nsubjpass)
+      -> are/VBP (auxpass)
+      -> together/RB (advmod)
+      -> pairs/NNS (nmod:agent)
+        -> only/RB (advmod)
+        -> by/IN (case)
+        -> the/DT (det)
+        -> electrons/NNS (nmod:of)
+          -> of/IN (case)
+          -> held/VBN (acl:relcl)
+            -> that/WDT (nsubjpass)
+            -> are/VBP (auxpass)
+            -> together/RB (advmod)
+            -> atoms/NNS (nmod:agent)
+              -> by/IN (case)
+              -> the/DT (det)
+              -> component/NN (compound)
+  -> held/VBN (ccomp)
+  -> ./. (punct)
+
+2-grams
+--------
+With this                                    IN DT          
+this being                                   DT VBG         
+being said                                   VBG VBD        
+said one                                     VBD PRP        
+one can                                      PRP MD         
+can assume                                   MD VB          
+assume that                                  VB IN          
+that ``                                      IN ``          
+`` all                                       `` DT          
+all atomic                                   DT JJ          
+atomic kernels                               JJ NNS         
+kernels repel                                NNS VBP        
+repel one                                    VBP CD         
+one another                                  CD DT          
+another ''                                   DT ''          
+'' and                                       '' CC          
+and that                                     CC IN          
+that molecules                               IN NNS         
+molecules are                                NNS VBP        
+are held                                     VBP VBN        
+held together                                VBN RB         
+together only                                RB RB          
+only by                                      RB IN          
+by the                                       IN DT          
+the pairs                                    DT NNS         
+pairs of                                     NNS IN         
+of electrons                                 IN NNS         
+electrons that                               NNS WDT        
+that are                                     WDT VBP        
+are held                                     VBP VBN        
+held together                                VBN RB         
+together by                                  RB IN          
+by the                                       IN DT          
+the component                                DT NN          
+component atoms                              NN NNS         
+atoms                                        NNS            
++===============================================================+
+
++===============================================================+
+Sentence: Lewis designed the current Lewis structures that we use today by giving the idea of using colons or two dots to represent the two electrons acting as connecting links  between  two  atoms.
+
+Word            POS     Ent.           N.Ent.
+-----------------------------------------------------------------
+Lewis           NNP     PERSON              
+designed        VBD     O                   
+the             DT      O                   
+current         JJ      DATE           PRESENT_REF
+Lewis           NNP     PERSON              
+structures      NNS     O                   
+that            IN      O                   
+we              PRP     O                   
+use             VBP     O                   
+today           NN      DATE           THIS P1D
+by              IN      O                   
+giving          VBG     O                   
+the             DT      O                   
+idea            NN      O                   
+of              IN      O                   
+using           VBG     O                   
+colons          NNS     O                   
+or              CC      O                   
+two             CD      NUMBER         2.0  
+dots            NNS     O                   
+to              TO      O                   
+represent       VB      O                   
+the             DT      O                   
+two             CD      NUMBER         2.0  
+electrons       NNS     O                   
+acting          VBG     O                   
+as              IN      O                   
+connecting      VBG     O                   
+links           NNS     O                   
+between         IN      O                   
+two             CD      NUMBER         2.0  
+atoms           NNS     O                   
+.               .       O                   
+
+Dependency graph:
+-> designed/VBD (root)
+  -> Lewis/NNP (nsubj)
+  -> structures/NNS (dobj)
+    -> the/DT (det)
+    -> current/JJ (amod)
+    -> Lewis/NNP (compound)
+  -> use/VBP (ccomp)
+    -> that/IN (mark)
+    -> we/PRP (nsubj)
+    -> today/NN (nmod:tmod)
+    -> giving/VBG (advcl)
+      -> by/IN (mark)
+      -> idea/NN (dobj)
+        -> the/DT (det)
+        -> using/VBG (acl)
+          -> of/IN (mark)
+          -> colons/NNS (dobj)
+            -> or/CC (cc)
+            -> dots/NNS (conj:or)
+              -> two/CD (nummod)
+          -> dots/NNS (dobj)
+          -> represent/VB (xcomp)
+            -> to/TO (mark)
+            -> electrons/NNS (dobj)
+              -> the/DT (det)
+              -> two/CD (nummod)
+              -> acting/VBG (acl)
+                -> connecting/VBG (advcl)
+                  -> as/IN (mark)
+                  -> links/NNS (dobj)
+                    -> atoms/NNS (nmod:between)
+                      -> between/IN (case)
+                      -> two/CD (nummod)
+  -> ./. (punct)
+
+2-grams
+--------
+Lewis designed                               NNP VBD        
+designed the                                 VBD DT         
+the current                                  DT JJ          
+current Lewis                                JJ NNP         
+Lewis structures                             NNP NNS        
+structures that                              NNS IN         
+that we                                      IN PRP         
+we use                                       PRP VBP        
+use today                                    VBP NN         
+today by                                     NN IN          
+by giving                                    IN VBG         
+giving the                                   VBG DT         
+the idea                                     DT NN          
+idea of                                      NN IN          
+of using                                     IN VBG         
+using colons                                 VBG NNS        
+colons or                                    NNS CC         
+or two                                       CC CD          
+two dots                                     CD NNS         
+dots to                                      NNS TO         
+to represent                                 TO VB          
+represent the                                VB DT          
+the two                                      DT CD          
+two electrons                                CD NNS         
+electrons acting                             NNS VBG        
+acting as                                    VBG IN         
+as connecting                                IN VBG         
+connecting links                             VBG NNS        
+links between                                NNS IN         
+between two                                  IN CD          
+two atoms                                    CD NNS         
+atoms                                        NNS            
++===============================================================+
+
++===============================================================+
+Sentence: After  Lewis’  original  publication  about  bonding  the explanation of formal charges and resonance and their importance came about.
+
+Word            POS     Ent.           N.Ent.
+-----------------------------------------------------------------
+After           IN      O                   
+Lewis           NNP     PERSON              
+'               POS     O                   
+original        JJ      O                   
+publication     NN      O                   
+about           IN      O                   
+bonding         NN      O                   
+the             DT      O                   
+explanation     NN      O                   
+of              IN      O                   
+formal          JJ      O                   
+charges         NNS     O                   
+and             CC      O                   
+resonance       NN      O                   
+and             CC      O                   
+their           PRP$    O                   
+importance      NN      O                   
+came            VBD     O                   
+about           RB      O                   
+.               .       O                   
+
+Dependency graph:
+-> came/VBD (root)
+  -> publication/NN (nmod:after)
+    -> After/IN (case)
+    -> Lewis/NNP (nmod:poss)
+      -> '/POS (case)
+    -> original/JJ (amod)
+    -> bonding/NN (nmod:about)
+      -> about/IN (case)
+  -> explanation/NN (nsubj)
+    -> the/DT (det)
+    -> charges/NNS (nmod:of)
+      -> of/IN (case)
+      -> formal/JJ (amod)
+    -> and/CC (cc)
+    -> resonance/NN (conj:and)
+      -> and/CC (cc)
+      -> importance/NN (conj:and)
+        -> their/PRP$ (nmod:poss)
+    -> importance/NN (conj:and)
+  -> resonance/NN (nsubj)
+  -> about/RB (advmod)
+  -> ./. (punct)
+
+2-grams
+--------
+After Lewis                                  IN NNP         
+Lewis '                                      NNP POS        
+' original                                   POS JJ         
+original publication                         JJ NN          
+publication about                            NN IN          
+about bonding                                IN NN          
+bonding the                                  NN DT          
+the explanation                              DT NN          
+explanation of                               NN IN          
+of formal                                    IN JJ          
+formal charges                               JJ NNS         
+charges and                                  NNS CC         
+and resonance                                CC NN          
+resonance and                                NN CC          
+and their                                    CC PRP$        
+their importance                             PRP$ NN        
+importance came                              NN VBD         
+came about                                   VBD RB         
+about                                        RB             
++===============================================================+
+
++===============================================================+
+Sentence: In regards to resonance, Lewis had even mentioned that “we must not assume that all of  the molecules possess either one structure or the other,  but rather that  these forms represent the two limiting types, and that the individual molecules range all the way from one limit to the other.”
+
+Word            POS     Ent.           N.Ent.
+-----------------------------------------------------------------
+In              IN      O                   
+regards         VBZ     O                   
+to              TO      O                   
+resonance       NN      O                   
+,               ,       O                   
+Lewis           NNP     PERSON              
+had             VBD     O                   
+even            RB      O                   
+mentioned       VBN     O                   
+that            IN      O                   
+``              ``      O                   
+we              PRP     O                   
+must            MD      O                   
+not             RB      O                   
+assume          VB      O                   
+that            IN      O                   
+all             DT      O                   
+of              IN      O                   
+the             DT      O                   
+molecules       NNS     O                   
+possess         VBP     O                   
+either          RB      O                   
+one             CD      NUMBER         1.0  
+structure       NN      O                   
+or              CC      O                   
+the             DT      O                   
+other           JJ      O                   
+,               ,       O                   
+but             CC      O                   
+rather          RB      O                   
+that            IN      O                   
+these           DT      O                   
+forms           NNS     O                   
+represent       VBP     O                   
+the             DT      O                   
+two             CD      NUMBER         2.0  
+limiting        VBG     O                   
+types           NNS     O                   
+,               ,       O                   
+and             CC      O                   
+that            IN      O                   
+the             DT      O                   
+individual      JJ      O                   
+molecules       NNS     O                   
+range           VBP     O                   
+all             PDT     O                   
+the             DT      O                   
+way             NN      O                   
+from            IN      O                   
+one             CD      NUMBER         1.0  
+limit           NN      O                   
+to              TO      O                   
+the             DT      O                   
+other           JJ      O                   
+.               .       O                   
+''              ''      O                   
+
+Dependency graph:
+-> mentioned/VBN (root)
+  -> regards/VBZ (advcl)
+    -> In/IN (mark)
+    -> resonance/NN (nmod:to)
+      -> to/TO (case)
+  -> ,/, (punct)
+  -> Lewis/NNP (nsubj)
+  -> had/VBD (aux)
+  -> even/RB (advmod)
+  -> assume/VB (ccomp)
+    -> that/IN (mark)
+    -> ``/`` (punct)
+    -> we/PRP (nsubj)
+    -> must/MD (aux)
+    -> not/RB (neg)
+    -> possess/VBP (ccomp)
+      -> that/IN (mark)
+      -> all/DT (nsubj)
+        -> molecules/NNS (nmod:of)
+          -> of/IN (case)
+          -> the/DT (det)
+      -> structure/NN (dobj)
+        -> either/RB (advmod)
+        -> one/CD (nummod)
+        -> or/CC (cc)
+        -> other/JJ (conj:or)
+          -> the/DT (det)
+      -> other/JJ (dobj)
+      -> ,/, (punct)
+      -> rather/RB (cc)
+        -> but/CC (cc)
+      -> represent/VBP (conj:rather)
+        -> that/IN (mark)
+        -> forms/NNS (nsubj)
+          -> these/DT (det)
+        -> limiting/VBG (dep)
+          -> two/CD (nsubj)
+            -> the/DT (det)
+          -> types/NNS (dobj)
+    -> represent/VBP (ccomp)
+    -> ,/, (punct)
+    -> and/CC (cc)
+    -> range/VBP (conj:and)
+      -> that/IN (mark)
+      -> molecules/NNS (nsubj)
+        -> the/DT (det)
+        -> individual/JJ (amod)
+      -> way/NN (dobj)
+        -> all/PDT (det:predet)
+        -> the/DT (det)
+      -> limit/NN (nmod:from)
+        -> from/IN (case)
+        -> one/CD (nummod)
+        -> other/JJ (nmod:to)
+          -> to/TO (case)
+          -> the/DT (det)
+  -> range/VBP (ccomp)
+  -> ./. (punct)
+  -> ''/'' (punct)
+
+2-grams
+--------
+In regards                                   IN VBZ         
+regards to                                   VBZ TO         
+to resonance                                 TO NN          
+resonance Lewis                              NN NNP         
+Lewis had                                    NNP VBD        
+had even                                     VBD RB         
+even mentioned                               RB VBN         
+mentioned that                               VBN IN         
+that ``                                      IN ``          
+`` we                                        `` PRP         
+we must                                      PRP MD         
+must not                                     MD RB          
+not assume                                   RB VB          
+assume that                                  VB IN          
+that all                                     IN DT          
+all of                                       DT IN          
+of the                                       IN DT          
+the molecules                                DT NNS         
+molecules possess                            NNS VBP        
+possess either                               VBP RB         
+either one                                   RB CD          
+one structure                                CD NN          
+structure or                                 NN CC          
+or the                                       CC DT          
+the other                                    DT JJ          
+other but                                    JJ CC          
+but rather                                   CC RB          
+rather that                                  RB IN          
+that these                                   IN DT          
+these forms                                  DT NNS         
+forms represent                              NNS VBP        
+represent the                                VBP DT         
+the two                                      DT CD          
+two limiting                                 CD VBG         
+limiting types                               VBG NNS        
+types and                                    NNS CC         
+and that                                     CC IN          
+that the                                     IN DT          
+the individual                               DT JJ          
+individual molecules                         JJ NNS         
+molecules range                              NNS VBP        
+range all                                    VBP PDT        
+all the                                      PDT DT         
+the way                                      DT NN          
+way from                                     NN IN          
+from one                                     IN CD          
+one limit                                    CD NN          
+limit to                                     NN TO          
+to the                                       TO DT          
+the other                                    DT JJ          
+other ''                                     JJ ''          
+''                                           ''             
++===============================================================+
+
++===============================================================+
+Sentence: These two stemmed directly from the Lewis Theory of Bonding.
+
+Word            POS     Ent.           N.Ent.
+-----------------------------------------------------------------
+These           DT      O                   
+two             CD      NUMBER         2.0  
+stemmed         VBD     O                   
+directly        RB      O                   
+from            IN      O                   
+the             DT      O                   
+Lewis           NNP     O                   
+Theory          NNP     O                   
+of              IN      O                   
+Bonding         NNP     O                   
+.               .       O                   
+
+Dependency graph:
+-> stemmed/VBD (root)
+  -> two/CD (nsubj)
+    -> These/DT (det)
+  -> directly/RB (advmod)
+  -> Theory/NNP (nmod:from)
+    -> from/IN (case)
+    -> the/DT (det)
+    -> Lewis/NNP (compound)
+    -> Bonding/NNP (nmod:of)
+      -> of/IN (case)
+  -> ./. (punct)
+
+2-grams
+--------
+These two                                    DT CD          
+two stemmed                                  CD VBD         
+stemmed directly                             VBD RB         
+directly from                                RB IN          
+from the                                     IN DT          
+the Lewis                                    DT NNP         
+Lewis Theory                                 NNP NNP        
+Theory of                                    NNP IN         
+of Bonding                                   IN NNP         
+Bonding                                      NNP            
++===============================================================+
+
++===============================================================+
+Sentence: The present day understanding of Lewis diagrams uses the “dot and cross” model shown below.
+
+Word            POS     Ent.           N.Ent.
+-----------------------------------------------------------------
+The             DT      DATE           THIS P1D
+present         JJ      DATE           THIS P1D
+day             NN      DATE           THIS P1D
+understanding   NN      O                   
+of              IN      O                   
+Lewis           NNP     O                   
+diagrams        NNS     O                   
+uses            VBZ     O                   
+the             DT      O                   
+``              ``      O                   
+dot             NN      O                   
+and             CC      O                   
+cross           VB      O                   
+''              ''      O                   
+model           NN      O                   
+shown           VBN     O                   
+below           IN      O                   
+.               .       O                   
+
+Dependency graph:
+-> uses/VBZ (root)
+  -> understanding/NN (nsubj)
+    -> The/DT (det)
+    -> present/JJ (amod)
+    -> day/NN (compound)
+    -> diagrams/NNS (nmod:of)
+      -> of/IN (case)
+      -> Lewis/NNP (compound)
+  -> dot/NN (dobj)
+    -> the/DT (det)
+    -> ``/`` (punct)
+  -> and/CC (cc)
+  -> cross/VB (conj:and)
+    -> understanding/NN (nsubj)
+    -> ''/'' (punct)
+    -> model/NN (dobj)
+      -> shown/VBN (acl)
+        -> below/IN (nmod)
+  -> ./. (punct)
+
+2-grams
+--------
+The present                                  DT JJ          
+present day                                  JJ NN          
+day understanding                            NN NN          
+understanding of                             NN IN          
+of Lewis                                     IN NNP         
+Lewis diagrams                               NNP NNS        
+diagrams uses                                NNS VBZ        
+uses the                                     VBZ DT         
+the ``                                       DT ``          
+`` dot                                       `` NN          
+dot and                                      NN CC          
+and cross                                    CC VB          
+cross ''                                     VB ''          
+'' model                                     '' NN          
+model shown                                  NN VBN         
+shown below                                  VBN IN         
+below                                        IN             
++===============================================================+
+
++===============================================================+
+Sentence: 23326261-b684-4276-8e0a-36e6c5ba90df - Chemistry 130 SSG Fall 13 - P4D2.
+
+Word            POS     Ent.           N.Ent.
+-----------------------------------------------------------------
+23326261-b684-4276-8e0a-36e6c5ba90dfJJ      O                   
+-               :       O                   
+Chemistry       NNP     O                   
+130             CD      NUMBER         130.0
+SSG             NNP     O                   
+Fall            NN      DATE           XXXX-FA
+13              CD      NUMBER         13.0 
+-               :       O                   
+P4D2            NN      O                   
+.               .       O                   
+
+Dependency graph:
+-> 23326261-b684-4276-8e0a-36e6c5ba90df/JJ (root)
+  -> -/: (punct)
+  -> Chemistry/NNP (dep)
+    -> 130/CD (nummod)
+    -> Fall/NN (dep)
+      -> SSG/NNP (compound)
+      -> 13/CD (nummod)
+    -> -/: (punct)
+    -> P4D2/NN (dep)
+  -> ./. (punct)
+
+2-grams
+--------
+23326261-b684-4276-8e0a-36e6c5ba90df ChemistryJJ NNP         
+Chemistry 130                                NNP CD         
+130 SSG                                      CD NNP         
+SSG Fall                                     NNP NN         
+Fall 13                                      NN CD          
+13 P4D2                                      CD NN          
+P4D2                                         NN             
++===============================================================+
+
++===============================================================+
+Sentence: Page 3 of 4
+As seen above, cubes are no longer used and the bonds are expressed through a line, each  line  represent  two  electrons.
+
+Word            POS     Ent.           N.Ent.
+-----------------------------------------------------------------
+Page            NNP     O                   
+3               CD      NUMBER         3.0  
+of              IN      O                   
+4               CD      NUMBER         4.0  
+As              IN      O                   
+seen            VBN     O                   
+above           IN      O                   
+,               ,       O                   
+cubes           NNS     O                   
+are             VBP     O                   
+no              RB      O                   
+longer          RB      O                   
+used            VBN     O                   
+and             CC      O                   
+the             DT      O                   
+bonds           NNS     O                   
+are             VBP     O                   
+expressed       VBN     O                   
+through         IN      O                   
+a               DT      O                   
+line            NN      O                   
+,               ,       O                   
+each            DT      O                   
+line            NN      O                   
+represent       VBP     O                   
+two             CD      NUMBER         2.0  
+electrons       NNS     O                   
+.               .       O                   
+
+Dependency graph:
+-> represent/VBP (root)
+  -> used/VBN (advcl)
+    -> Page/NNP (dep)
+      -> 3/CD (nummod)
+      -> 4/CD (nmod:of)
+        -> of/IN (case)
+    -> As/IN (mark)
+    -> seen/VBN (advcl)
+      -> above/IN (nmod)
+    -> ,/, (punct)
+    -> cubes/NNS (nsubjpass)
+    -> are/VBP (auxpass)
+    -> longer/RB (advmod)
+      -> no/RB (neg)
+    -> and/CC (cc)
+    -> expressed/VBN (conj:and)
+      -> bonds/NNS (nsubjpass)
+        -> the/DT (det)
+      -> are/VBP (auxpass)
+      -> line/NN (nmod:through)
+        -> through/IN (case)
+        -> a/DT (det)
+  -> expressed/VBN (advcl)
+  -> ,/, (punct)
+  -> line/NN (nsubj)
+    -> each/DT (det)
+  -> electrons/NNS (dobj)
+    -> two/CD (nummod)
+  -> ./. (punct)
+
+2-grams
+--------
+Page 3                                       NNP CD         
+3 of                                         CD IN          
+of 4                                         IN CD          
+4 As                                         CD IN          
+As seen                                      IN VBN         
+seen above                                   VBN IN         
+above cubes                                  IN NNS         
+cubes are                                    NNS VBP        
+are no                                       VBP RB         
+no longer                                    RB RB          
+longer used                                  RB VBN         
+used and                                     VBN CC         
+and the                                      CC DT          
+the bonds                                    DT NNS         
+bonds are                                    NNS VBP        
+are expressed                                VBP VBN        
+expressed through                            VBN IN         
+through a                                    IN DT          
+a line                                       DT NN          
+line each                                    NN DT          
+each line                                    DT NN          
+line represent                               NN VBP         
+represent two                                VBP CD         
+two electrons                                CD NNS         
+electrons                                    NNS            
++===============================================================+
+
++===============================================================+
+Sentence: Modern  day  chemistry  provides  more  of  an understanding of the double and triple bonds that Lewis had briefly touched on and how these bonds are essential for creating the most accurate representation of the bonds between atoms, due to the minimization of formal charges.
+
+Word            POS     Ent.           N.Ent.
+-----------------------------------------------------------------
+Modern          NNP     O                   
+day             NN      DURATION       P1D  
+chemistry       NN      O                   
+provides        VBZ     O                   
+more            JJR     O                   
+of              IN      O                   
+an              DT      O                   
+understanding   NN      O                   
+of              IN      O                   
+the             DT      O                   
+double          JJ      O                   
+and             CC      O                   
+triple          JJ      O                   
+bonds           NNS     O                   
+that            WDT     O                   
+Lewis           NNP     PERSON              
+had             VBD     O                   
+briefly         RB      O                   
+touched         VBN     O                   
+on              IN      O                   
+and             CC      O                   
+how             WRB     O                   
+these           DT      O                   
+bonds           NNS     O                   
+are             VBP     O                   
+essential       JJ      O                   
+for             IN      O                   
+creating        VBG     O                   
+the             DT      O                   
+most            RBS     O                   
+accurate        JJ      O                   
+representation  NN      O                   
+of              IN      O                   
+the             DT      O                   
+bonds           NNS     O                   
+between         IN      O                   
+atoms           NNS     O                   
+,               ,       O                   
+due             JJ      O                   
+to              TO      O                   
+the             DT      O                   
+minimization    NN      O                   
+of              IN      O                   
+formal          JJ      O                   
+charges         NNS     O                   
+.               .       O                   
+
+Dependency graph:
+-> provides/VBZ (root)
+  -> chemistry/NN (nsubj)
+    -> Modern/NNP (compound)
+    -> day/NN (compound)
+  -> more/JJR (dobj)
+    -> understanding/NN (nmod:of)
+      -> of/IN (case)
+      -> an/DT (det)
+      -> bonds/NNS (nmod:of)
+        -> of/IN (case)
+        -> the/DT (det)
+        -> double/JJ (amod)
+          -> and/CC (cc)
+          -> triple/JJ (conj:and)
+        -> triple/JJ (amod)
+  -> touched/VBN (dep)
+    -> that/WDT (nmod:on)
+      -> on/IN (case)
+    -> Lewis/NNP (nsubj)
+    -> had/VBD (aux)
+    -> briefly/RB (advmod)
+    -> and/CC (cc)
+    -> essential/JJ (conj:and)
+      -> how/WRB (advmod)
+      -> bonds/NNS (nsubj)
+        -> these/DT (det)
+      -> are/VBP (cop)
+      -> creating/VBG (advcl)
+        -> for/IN (mark)
+        -> representation/NN (dobj)
+          -> the/DT (det)
+          -> accurate/JJ (amod)
+            -> most/RBS (advmod)
+          -> bonds/NNS (nmod:of)
+            -> of/IN (case)
+            -> the/DT (det)
+          -> atoms/NNS (nmod:between)
+            -> between/IN (case)
+          -> ,/, (punct)
+          -> due/JJ (amod)
+            -> minimization/NN (nmod:to)
+              -> to/TO (case)
+              -> the/DT (det)
+              -> charges/NNS (nmod:of)
+                -> of/IN (case)
+                -> formal/JJ (amod)
+  -> essential/JJ (dep)
+  -> ./. (punct)
+
+2-grams
+--------
+Modern day                                   NNP NN         
+day chemistry                                NN NN          
+chemistry provides                           NN VBZ         
+provides more                                VBZ JJR        
+more of                                      JJR IN         
+of an                                        IN DT          
+an understanding                             DT NN          
+understanding of                             NN IN          
+of the                                       IN DT          
+the double                                   DT JJ          
+double and                                   JJ CC          
+and triple                                   CC JJ          
+triple bonds                                 JJ NNS         
+bonds that                                   NNS WDT        
+that Lewis                                   WDT NNP        
+Lewis had                                    NNP VBD        
+had briefly                                  VBD RB         
+briefly touched                              RB VBN         
+touched on                                   VBN IN         
+on and                                       IN CC          
+and how                                      CC WRB         
+how these                                    WRB DT         
+these bonds                                  DT NNS         
+bonds are                                    NNS VBP        
+are essential                                VBP JJ         
+essential for                                JJ IN          
+for creating                                 IN VBG         
+creating the                                 VBG DT         
+the most                                     DT RBS         
+most accurate                                RBS JJ         
+accurate representation                      JJ NN          
+representation of                            NN IN          
+of the                                       IN DT          
+the bonds                                    DT NNS         
+bonds between                                NNS IN         
+between atoms                                IN NNS         
+atoms due                                    NNS JJ         
+due to                                       JJ TO          
+to the                                       TO DT          
+the minimization                             DT NN          
+minimization of                              NN IN          
+of formal                                    IN JJ          
+formal charges                               JJ NNS         
+charges                                      NNS            
++===============================================================+
+
++===============================================================+
+Sentence: 23326261-b684-4276-8e0a-36e6c5ba90df - Chemistry 130 SSG Fall 13 - P4D2.
+
+Word            POS     Ent.           N.Ent.
+-----------------------------------------------------------------
+23326261-b684-4276-8e0a-36e6c5ba90dfJJ      O                   
+-               :       O                   
+Chemistry       NNP     O                   
+130             CD      NUMBER         130.0
+SSG             NNP     O                   
+Fall            NN      DATE           XXXX-FA
+13              CD      NUMBER         13.0 
+-               :       O                   
+P4D2            NN      O                   
+.               .       O                   
+
+Dependency graph:
+-> 23326261-b684-4276-8e0a-36e6c5ba90df/JJ (root)
+  -> -/: (punct)
+  -> Chemistry/NNP (dep)
+    -> 130/CD (nummod)
+    -> Fall/NN (dep)
+      -> SSG/NNP (compound)
+      -> 13/CD (nummod)
+    -> -/: (punct)
+    -> P4D2/NN (dep)
+  -> ./. (punct)
+
+2-grams
+--------
+23326261-b684-4276-8e0a-36e6c5ba90df ChemistryJJ NNP         
+Chemistry 130                                NNP CD         
+130 SSG                                      CD NNP         
+SSG Fall                                     NNP NN         
+Fall 13                                      NN CD          
+13 P4D2                                      CD NN          
+P4D2                                         NN             
++===============================================================+
+
++===============================================================+
+Sentence: Page 4 of 4
+
+Word            POS     Ent.           N.Ent.
+-----------------------------------------------------------------
+Page            NNP     O                   
+4               CD      NUMBER         4.0  
+of              IN      O                   
+4               CD      NUMBER         4.0  
+
+Dependency graph:
+-> Page/NNP (root)
+  -> 4/CD (nummod)
+  -> 4/CD (nmod:of)
+    -> of/IN (case)
+
+2-grams
+--------
+Page 4                                       NNP CD         
+4 of                                         CD IN          
+of 4                                         IN CD          
+4                                            CD             
++===============================================================+
+
