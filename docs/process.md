@@ -5,12 +5,12 @@
 
 ## Experimentation
 ### Dependency Parsing
-* Played with dependency graphs, but challenging to pull meaning -- decided to skip
+* Powerful feature, but challenging to pull meaning in isolation
 
 ### Sentiment Analysis
 * Can recognize positive / negative connotations
 * CoreNLP uses deep learning to improve on typical approach
-* Potentially useful, but probably needs domain-specific tuning
+* Potentially useful, but requires domain-specific tuning
 
 ### Named Entity Recognition
 * Built in NER can recognize people, locations, organizations
@@ -19,8 +19,9 @@
 * We care less about normalized entities for now (little meaning without context)
 * Pull out named entities and convert to lowercase, remove normalized entities
 * Combine and sort counts for all named entities
-* Problems:
+* Problems with my method:
     * Token-based with no knowledge of grammar; could combine with Dependency Parsing
+    * Could combine with dependency analysis to pull out phrases instead of tokens
     * Included NER model is very generic
     * Better results if trained with domain-specific corpus
     
